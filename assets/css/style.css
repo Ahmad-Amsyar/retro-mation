@@ -1,0 +1,641 @@
+/* assets/css/style.css */
+
+/* Define retro color palette using CSS variables (New Colour Theme) */
+:root {
+    --retro-bg: #F9EECE; /* Light Yellow/White - Background */
+    --retro-text: #010002; /* Black - Main Text */
+    --retro-neon-pink: #D13328; /* Vibrant Red - Accent 1 */
+    --retro-neon-cyan: #007AB3; /* Vibrant Blue - Accent 2 */
+    --retro-neon-yellow: #F6CB0B; /* Vibrant Yellow/Orange - Accent 3 */
+    --retro-accent: #D13328; /* Using Vibrant Red as primary accent */
+    --font-pixel: 'Press Start 2P', cursive; /* Defined font variables */
+    --font-mono: 'VT323', monospace;
+}
+
+body {
+    background-color: var(--retro-bg);
+    color: var(--retro-text);
+    font-family: var(--font-mono);
+    font-size: 1rem; /* Consistent base font size for body */
+    /* Subtle scanline effect */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 100% 3px;
+}
+
+body.venue-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADINGS --- */
+h1, h2, h3, h4 {
+    font-family: var(--font-pixel);
+    text-shadow: 2px 2px var(--retro-neon-cyan); /* Blue shadow default */
+    letter-spacing: 2px;
+}
+
+h1 { color: var(--retro-neon-pink); text-shadow: 2px 2px var(--retro-neon-cyan); }
+h2 { color: var(--retro-neon-pink); text-shadow: 2px 2px var(--retro-neon-yellow); }
+
+/* Project Card H3 & Showcase Section H3 (Film Title) */
+.project-card h3,
+.showcase-section > h3 {
+    font-family: 'VT323', monospace;
+    color: var(--retro-neon-pink);
+    text-shadow: none;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.showcase-section > h3 {
+    margin-bottom: 1.5rem;
+}
+
+.venue-page h3 {
+    color: var(--retro-neon-pink);
+    text-shadow: 2px 2px var(--retro-neon-yellow);
+    font-size: 1.5rem;
+    font-family: var(--font-pixel);
+}
+
+h4 {
+    color: var(--retro-neon-cyan);
+    text-shadow: none;
+    font-size: 1.3em;
+    font-family: var(--font-pixel);
+}
+
+/* --- LINKS --- */
+a {
+    color: var(--retro-neon-cyan);
+    text-decoration: underline;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+a:hover {
+    color: var(--retro-accent);
+    text-shadow: 0 0 5px var(--retro-neon-yellow);
+}
+
+/* --- PARAGRAPH STYLING --- */
+.showcase-section p,
+.venue-page .info-section p,
+.schedule-table td,
+.event-info-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--retro-text);
+}
+.event-info-section p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+#overview p {
+    text-shadow: 1px 1px 0 var(--retro-bg);
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--retro-text);
+}
+
+/* --- BUTTONS --- */
+.retro-button {
+    font-family: var(--font-pixel);
+    background-color: var(--retro-accent);
+    color: var(--retro-bg);
+    padding: 12px 24px;
+    border: 3px solid var(--retro-text);
+    box-shadow: 4px 4px 0 var(--retro-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+.retro-button:hover {
+    background-color: var(--retro-neon-cyan);
+    color: var(--retro-text);
+    box-shadow: 4px 4px 0 var(--retro-neon-yellow);
+    border-color: var(--retro-neon-yellow);
+    transform: translate(-2px, -2px);
+}
+.retro-button:active {
+     transform: translate(2px, 2px);
+     box-shadow: 1px 1px 0 var(--retro-text);
+}
+
+.retro-button-sm {
+    font-family: var(--font-pixel);
+    background-color: var(--retro-neon-cyan);
+    color: var(--retro-bg);
+    padding: 8px 16px;
+    border: 2px solid var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin: 0 0.5rem;
+}
+.retro-button-sm:hover {
+    background-color: var(--retro-neon-yellow);
+    color: var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-accent);
+    border-color: var(--retro-accent);
+    transform: translate(-1px, -1px);
+}
+.retro-button-sm:active {
+     transform: translate(1px, 1px);
+     box-shadow: 1px 1px 0 var(--retro-text);
+}
+
+/* --- SECTIONS (General Containers) --- */
+.info-section,
+.showcase-section,
+.event-info-section {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 3px solid var(--retro-neon-cyan);
+}
+
+.event-info-section {
+    border-color: var(--retro-accent);
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 5px var(--retro-accent);
+}
+.event-info-section:hover {
+    box-shadow: 0 0 15px var(--retro-accent), 0 0 20px var(--retro-accent), 0 0 25px var(--retro-accent);
+}
+.event-info-section .rounded-md {
+    max-width: none;
+    padding: 0;
+}
+.event-info-section p strong {
+    color: var(--retro-neon-cyan);
+    font-size: 1.1em;
+    text-shadow: 1px 1px 0 var(--retro-bg);
+}
+
+.venue-page .info-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.venue-page .info-section p strong {
+     color: var(--retro-neon-pink);
+}
+
+/* --- PROJECT CARDS (Homepage Scroller & BigShowcase Gallery) --- */
+.project-card {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s ease 0.3s;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    border-width: 3px;
+    border-style: solid;
+}
+.project-card img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+.project-card .card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex; /* This enables align-self for the button */
+    flex-direction: column;
+    justify-content: space-between; /* Pushes content apart, button to bottom */
+}
+.project-card p {
+    font-size: 1.375rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--retro-text);
+}
+
+.project-card .view-project-button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--retro-accent);
+    color: var(--retro-bg);
+    border: 2px solid var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: fit-content;
+    margin-top: auto; /* Push the button to the bottom of .card-content (flex item) */
+    align-self: center; /* Center the button horizontally within .card-content (flex container) */
+}
+.project-card .view-project-button:hover {
+    background-color: var(--retro-neon-yellow);
+    color: var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-neon-cyan);
+    border-color: var(--retro-neon-cyan);
+    transform: translate(-1px, -1px);
+}
+.project-card .view-project-button:active {
+     transform: translate(1px, 1px);
+     box-shadow: 1px 1px 0 var(--retro-text);
+}
+
+/* Homepage Scroller Card Specifics (#featured .project-card) */
+#featured .project-card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 1.5rem;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+#featured .project-card:last-child { margin-right: 0; }
+#featured .project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px var(--retro-neon-cyan);
+    z-index: 10;
+}
+#featured .project-card img {
+    height: 160px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+#featured .project-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+#featured .project-card .view-project-button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    /* align-self: center and margin-top: auto are inherited from base .project-card .view-project-button */
+}
+
+/* BigShowcase Gallery Card Specifics (#project-gallery .project-card) */
+#project-gallery .project-card {
+    /* border-color comes from JavaScript inline style based on category */
+}
+#project-gallery .project-card:hover {
+    transform: translateY(-5px);
+}
+#project-gallery .project-card img {
+    height: 200px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+#project-gallery .project-card .view-project-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    /* align-self: center and margin-top: auto are inherited from base .project-card .view-project-button */
+}
+
+/* --- HOMEPAGE SCROLLER --- */
+.scroll-wrapper {
+    position: relative;
+    padding: 20px 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: visible;
+}
+.scroll-container::-webkit-scrollbar { display: none; }
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--retro-bg);
+    border: 2px solid var(--retro-neon-cyan);
+    box-shadow: 2px 2px 0 var(--retro-neon-pink);
+    border-radius: 50%;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    line-height: 1;
+}
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--retro-neon-yellow);
+    box-shadow: 3px 3px 0 var(--retro-neon-cyan);
+    border-color: var(--retro-neon-yellow);
+    transform: translateY(-50%) scale(1.1);
+}
+.scroll-button:active {
+    transform: translateY(-50%) translate(1px, 1px);
+    box-shadow: 1px 1px 0 var(--retro-text);
+}
+.scroll-button.prev { left: 0px; }
+.scroll-button.next { right: 0px; }
+
+/* --- HOMEPAGE Info/Overview Layout --- */
+@media (min-width: 768px) {
+    .info-overview-container {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .info-overview-container > section {
+        flex: 1;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .info-overview-container #info.event-info-section {
+         padding: 1.5rem;
+    }
+    .info-overview-container #overview {
+        padding: 1.5rem;
+        border: 3px solid var(--retro-neon-cyan);
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+    .info-overview-container #overview p {
+         text-align: left;
+    }
+}
+
+/* --- SHOWCASE PAGE (.showcase-section content) --- */
+.showcase-section ul li {
+    color: var(--retro-text);
+    font-size: 1.5rem;
+}
+.showcase-section strong {
+     color: var(--retro-text);
+}
+.detail-value {
+    color: var(--retro-neon-cyan);
+}
+
+.video-placeholder {
+    background-color: #000;
+    border: 3px solid var(--retro-neon-pink);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--retro-neon-pink);
+    font-family: 'Press Start 2P', cursive;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.video-placeholder:hover {
+    border-color: var(--retro-neon-yellow);
+    box-shadow: 0 0 10px var(--retro-neon-yellow);
+}
+.video-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+.image-gallery img {
+    border: 2px solid var(--retro-neon-yellow);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.image-gallery img:hover {
+    transform: scale(1.05);
+    border-color: var(--retro-neon-pink);
+    box-shadow: 0 0 8px var(--retro-neon-pink);
+}
+
+/* Modal Styles (Showcase Page) */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 50; visibility: hidden; opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.modal-overlay.visible { visibility: visible; opacity: 1; }
+.modal-content {
+    position: relative; max-width: 98%; max-height: 98%;
+    display: flex; align-items: center; justify-content: center;
+}
+.modal-content img {
+    width: 80vw; height: auto; max-width: 100%; max-height: 90vh;
+    object-fit: contain; border: 4px solid var(--retro-neon-yellow);
+}
+.modal-nav-button {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); color: var(--retro-bg);
+    border: 2px solid var(--retro-neon-cyan); box-shadow: 2px 2px 0 var(--retro-neon-pink);
+    border-radius: 50%; width: 50px; height: 50px; font-size: 2rem;
+    cursor: pointer; z-index: 60; display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s ease; line-height: 1;
+}
+.modal-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); color: var(--retro-neon-yellow);
+    box-shadow: 3px 3px 0 var(--retro-neon-cyan); border-color: var(--retro-neon-yellow);
+}
+.modal-nav-button.prev { left: -60px; }
+.modal-nav-button.next { right: -60px; }
+.modal-close-button {
+    position: absolute; top: -20px; right: -20px;
+    background-color: var(--retro-neon-pink); color: var(--retro-bg);
+    border: 2px solid var(--retro-text); box-shadow: 2px 2px 0 var(--retro-text);
+    border-radius: 50%; width: 30px; height: 30px; font-size: 1.5rem;
+    cursor: pointer; z-index: 60; display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s ease; line-height: 1;
+}
+.modal-close-button:hover {
+    background-color: var(--retro-neon-cyan); color: var(--retro-text);
+    box-shadow: 2px 2px 0 var(--retro-neon-yellow); border-color: var(--retro-neon-yellow);
+}
+@media (max-width: 768px) {
+    .modal-nav-button.prev { left: 10px; }
+    .modal-nav-button.next { right: 10px; }
+    .modal-close-button { top: 10px; right: 10px; }
+}
+
+/* --- TIME PAGE (Schedule) --- */
+.table-responsive-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+.schedule-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+}
+.schedule-table th, .schedule-table td {
+    border: 2px solid var(--retro-neon-pink);
+    padding: 0.75rem;
+    text-align: left;
+}
+.schedule-table th {
+    background-color: rgba(209, 51, 40, 0.3);
+    color: var(--retro-text);
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.schedule-table td {
+     background-color: rgba(0, 122, 179, 0.1);
+     color: var(--retro-text);
+}
+.schedule-table tr:nth-child(even) td {
+    background-color: rgba(0, 122, 179, 0.2);
+}
+.day-buttons {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.day-button {
+    font-family: var(--font-pixel);
+    background-color: var(--retro-neon-cyan);
+    color: var(--retro-bg);
+    padding: 10px 20px;
+    border: 2px solid var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+}
+.day-button:hover {
+    background-color: var(--retro-neon-yellow);
+    color: var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-accent);
+    border-color: var(--retro-accent);
+    transform: translate(-1px, -1px);
+}
+.day-button:active {
+     transform: translate(1px, 1px);
+     box-shadow: 1px 1px 0 var(--retro-text);
+}
+.day-button.active {
+    background-color: var(--retro-accent);
+    color: var(--retro-bg);
+    box-shadow: 3px 3px 0 var(--retro-neon-yellow);
+    border-color: var(--retro-neon-yellow);
+}
+.schedule-table-container { display: none; }
+.schedule-table-container.active { display: block; }
+
+/* --- VENUE PAGE --- */
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    border: 3px solid var(--retro-neon-pink);
+    border-radius: 8px;
+    height: auto;
+    flex-grow: 1;
+}
+.map-container iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    border: 0;
+}
+@media (min-width: 768px) {
+    .venue-page .map-container {
+        padding-top: 0;
+        height: 100%;
+    }
+    .venue-page .info-section .flex-col.md\:flex-row {
+         flex-grow: 1;
+    }
+    .venue-page .info-section .flex-col.md\:flex-row > div {
+         display: flex;
+         flex-direction: column;
+    }
+    .venue-page .info-section .flex-col.md\:flex-row > div:first-child {
+         flex-grow: 0;
+    }
+    .venue-page .info-section .flex-col.md\:flex-row > div:last-child {
+         flex-grow: 1;
+         display: flex;
+         flex-direction: column;
+    }
+     .venue-page .info-section .flex-col.md\:flex-row > div:last-child h3 {
+         flex-shrink: 0;
+         margin-top: 0;
+     }
+}
+
+/* --- BIGSHOWCASE PAGE (Search) --- */
+.search-input {
+    font-family: var(--font-mono);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--retro-text);
+    border: 2px solid var(--retro-neon-cyan);
+    padding: 8px 16px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.search-input:focus {
+    border-color: var(--retro-neon-yellow);
+    box-shadow: 0 0 8px var(--retro-neon-yellow);
+}
+
+/* --- FOOTER --- */
+footer {
+    border-top: 3px solid var(--retro-accent);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-size: 0.875rem; /* Mobile */
+    color: var(--retro-text);
+}
+@media (min-width: 768px) {
+     footer {
+         font-size: 1rem; /* Desktop */
+     }
+}

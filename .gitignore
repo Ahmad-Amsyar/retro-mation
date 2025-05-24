@@ -1,0 +1,8 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+# Add any other files/folders you don't want to commit
+# For example, if you have a node_modules folder:
+# node_modules/

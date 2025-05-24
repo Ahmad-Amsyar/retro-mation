@@ -1,0 +1,175 @@
+---
+layout: default # This layout itself uses the default.html layout
+---
+<div class="mb-6">
+    <a href="{{ '/bigshowcase.html' | relative_url }}" class="retro-button">< Back to Showcase</a>
+</div>
+
+<h1 class="text-3xl md:text-5xl mb-8 text-center uppercase">{{ page.student_name }}</h1>
+
+<main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+    <div class="lg:col-span-1">
+        <section class="showcase-section">
+            {% if page.student_photo_url %}
+            <img src="{{ page.student_photo_url | relative_url }}" alt="Photo of {{ page.student_name }}" class="w-full max-w-xs mx-auto mb-6 border-4 border-retro-neon-cyan rounded-full shadow-lg shadow-retro-neon-cyan/30">
+            {% endif %}
+
+            <h4 class="mb-2">Introduction:</h4>
+            <div class="mb-4 showcase-section-paragraph">
+                {{ page.introduction | markdownify }}
+            </div>
+
+            {% if page.skills %}
+            <h4 class="mb-2">Skills / Software:</h4>
+            <ul class="list-disc list-inside mb-4">
+                {% for skill in page.skills %}
+                <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            {% if page.online_links %}
+            <h4 class="mb-2">Find Me Online:</h4>
+            <p class="showcase-section-paragraph">
+                {% for link_item in page.online_links %}
+                    <a href="{{ link_item.url }}" target="_blank" class="hover:text-retro-accent">[{{ link_item.name }}]</a>{% unless forloop.last %} | {% endunless %}
+                {% endfor %}
+            </p>
+            {% endif %}
+        </section>
+    </div>
+
+    <div class="lg:col-span-2">
+        <section class="showcase-section">
+            <h3 class="text-3xl md:text-4xl mb-6">{{ page.project_title }}</h3>
+            {% if page.video_embed_url %}
+            <div class="video-placeholder mb-6">
+                <iframe width="560" height="315" src="{{ page.video_embed_url }}" title="YouTube video player for {{ page.project_title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+
+            {% if page.synopsis %}
+            <h4 class="mb-2">Synopsis:</h4>
+            <div class="mb-4 showcase-section-paragraph">
+                {{ page.synopsis | markdownify }}
+            </div>
+            {% endif %}
+
+            {% if page.details %}
+            <h4 class="mb-2">Details:</h4>
+            <ul class="list-none mb-6">
+                {% if page.details.runtime %}<li><strong class="text-retro-text">Runtime:</strong> <span class="detail-value">{{ page.details.runtime }}</span></li>{% endif %}
+                {% if page.details.genre %}<li><strong class="text-retro-text">Genre:</strong> <span class="detail-value">{{ page.details.genre }}</span></li>{% endif %}
+            </ul>
+            {% endif %}
+
+            {% if page.directors_statement %}
+            <h4 class="mb-2">Director's Statement:</h4>
+            <div class="mb-6 italic showcase-section-paragraph">
+                "{{ page.directors_statement | markdownify }}" - {{ page.student_name }}
+            </div>
+            {% endif %}
+
+            {% if page.gallery_images %}
+            <h4 class="mb-3">Gallery / Concept Art:</h4>
+            <div class="image-gallery" id="gallery-container">
+                {% for image_path in page.gallery_images %}
+                <img src="{{ image_path | relative_url }}" alt="Gallery image for {{ page.project_title }}">
+                {% endfor %}
+            </div>
+            {% endif %}
+        </section>
+    </div>
+</main>
+
+<!-- Modal for image gallery (copied from your showcase.html) -->
+<div id="image-modal" class="modal-overlay">
+    <div class="modal-content">
+        <img id="enlarged-image" src="" alt="Enlarged Project Image">
+        <button id="prev-image" class="modal-nav-button prev">◀</button>
+        <button id="next-image" class="modal-nav-button next">▶</button>
+        <button id="close-modal" class="modal-close-button">×</button>
+    </div>
+</div>
+
+<script>
+// Get the gallery container
+const galleryContainer = document.getElementById('gallery-container');
+const galleryImageUrls = [];
+let currentGalleryImageIndex = 0;
+
+const imageModal = document.getElementById('image-modal');
+const enlargedImage = document.getElementById('enlarged-image');
+const prevButton = document.getElementById('prev-image');
+const nextButton = document.getElementById('next-image');
+const closeModalButton = document.getElementById('close-modal');
+
+function openModal(imageUrl, index) {
+    enlargedImage.src = imageUrl;
+    currentGalleryImageIndex = index;
+    imageModal.classList.add('visible');
+}
+
+function closeModal() {
+    imageModal.classList.remove('visible');
+    enlargedImage.src = '';
+}
+
+function showPrevImage() {
+    if (galleryImageUrls.length === 0) return;
+    currentGalleryImageIndex = (currentGalleryImageIndex - 1 + galleryImageUrls.length) % galleryImageUrls.length;
+    enlargedImage.src = galleryImageUrls[currentGalleryImageIndex];
+}
+
+function showNextImage() {
+    if (galleryImageUrls.length === 0) return;
+    currentGalleryImageIndex = (currentGalleryImageIndex + 1) % galleryImageUrls.length;
+    enlargedImage.src = galleryImageUrls[currentGalleryImageIndex];
+}
+
+if (galleryContainer) {
+    galleryContainer.addEventListener('click', (event) => {
+        if (event.target.tagName === 'IMG') {
+            const clickedImage = event.target;
+            const imageUrl = clickedImage.src;
+            const index = galleryImageUrls.indexOf(imageUrl);
+            if (index !== -1) {
+                openModal(imageUrl, index);
+            }
+        }
+    });
+}
+
+if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
+if (imageModal) {
+    imageModal.addEventListener('click', (event) => {
+        if (event.target === imageModal) {
+            closeModal();
+        }
+    });
+}
+if (prevButton) prevButton.addEventListener('click', showPrevImage);
+if (nextButton) nextButton.addEventListener('click', showNextImage);
+
+document.addEventListener('keydown', (event) => {
+    if (imageModal && imageModal.classList.contains('visible')) {
+        if (event.key === 'ArrowLeft') {
+            showPrevImage();
+        } else if (event.key === 'ArrowRight') {
+            showNextImage();
+        } else if (event.key === 'Escape') {
+            closeModal();
+        }
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (galleryContainer) {
+        const galleryImages = galleryContainer.querySelectorAll('img');
+        galleryImages.forEach(img => {
+            galleryImageUrls.push(img.src);
+        });
+    }
+});
+</script>

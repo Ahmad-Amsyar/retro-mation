@@ -1,0 +1,82 @@
+---
+title: Homepage (New Colour Theme)
+layout: default
+scripts:
+  - "/assets/js/homepage_scroller.js"
+---
+<header class="text-center mb-12 md:mb-20">
+    <h1 class="text-4xl md:text-5xl mb-4 uppercase">Animasi FYP Showcase</h1>
+    <!-- Corrected: Used site.time with plus filter for next year -->
+    <p class="text-xl md:text-2xl mb-2" style="font-family: 'Press Start 2P', cursive; color: var(--retro-neon-pink);">Retro Edition {{ site.time | date: '%Y' | plus: 1 }}!</p>
+    <div class="mb-8">
+        <img src="https://placehold.co/600x300/F6CB0B/010002?text=Awesome+Animation+Here!" alt="Featured Animation Visual" class="mx-auto border-4 border-retro-neon-yellow shadow-lg shadow-retro-neon-yellow/30">
+        <!-- Or use a local image: <img src="{{ '/assets/images/featured-animation.jpg' | relative_url }}" ... > -->
+    </div>
+    <div class="flex justify-center items-center flex-wrap gap-4">
+        <a href="{{ '/bigshowcase.html' | relative_url }}" class="retro-button text-lg">Explore All Projects ></a>
+        <a href="{{ '/time.html' | relative_url }}" class="retro-button-sm">Schedule</a>
+        <a href="{{ '/venue.html' | relative_url }}" class="retro-button-sm">Venue</a>
+    </div>
+</header>
+
+<main>
+    <div class="info-overview-container flex flex-col md:flex-row gap-8">
+         <section id="info" class="event-info-section">
+             <h2 class="text-2xl md:text-3xl mb-6 uppercase">Event Info</h2>
+             <div class="rounded-md">
+                 <!-- Corrected: Used site.time with plus filter for next year -->
+                 <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Date:</strong> April 15-17, {{ site.time | date: '%Y' | plus: 1 }}</p>
+                 <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Time:</strong> 10:00 AM - 6:00 PM Daily</p>
+                 <p class="text-lg"><strong style="color: var(--retro-neon-cyan);">Venue:</strong> Online! Explore anytime via this website.</p>
+             </div>
+        </section>
+
+        <section id="overview" class="mb-12 md:mb-16 text-center">
+            <h2 class="text-2xl md:text-3xl mb-6 uppercase">What's This All About?</h2>
+            <p class="max-w-2xl mx-auto text-base md:text-lg">
+                This showcase celebrates the hard work and creativity of our final year animation students. It's the culmination of their studies, featuring diverse styles and stories brought to life through animation. Prepare to be amazed!
+            </p>
+        </section>
+    </div>
+
+    <section id="featured" class="mb-12 md:mb-16">
+        <h2 class="text-2xl md:text-3xl mb-8 text-center uppercase">Project Highlights</h2>
+
+        <div class="scroll-wrapper">
+            <button class="scroll-button prev" aria-label="Previous Projects" onclick="manualScroll(-1)">◀</button>
+            <div class="scroll-container" id="highlights-container">
+                {% assign featured_projects = site.projects | where: "featured", true %}
+                {% assign num_projects = featured_projects | size %}
+                {% assign cards_to_duplicate = site.cards_to_duplicate_for_scroller | default: 5 %}
+
+                {% if num_projects > 0 %}
+                    <!-- Duplicates for start (from end of list) -->
+                    {% for i in (1..cards_to_duplicate) %}
+                        {% assign project_index = num_projects | minus: cards_to_duplicate | plus: i | minus: 1 %}
+                        {% if project_index >= 0 and project_index < num_projects %}
+                            {% assign project = featured_projects[project_index] %}
+                            {% include project_card.html project=project card_type="homepage" %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <!-- Actual cards -->
+                    {% for project in featured_projects %}
+                        {% include project_card.html project=project card_type="homepage" %}
+                    {% endfor %}
+
+                    <!-- Duplicates for end (from start of list) -->
+                    {% assign cards_to_duplicate_minus_1 = cards_to_duplicate | minus: 1 %}
+                    {% for i in (0..cards_to_duplicate_minus_1) %}
+                        {% if i < num_projects %}
+                            {% assign project = featured_projects[i] %}
+                            {% include project_card.html project=project card_type="homepage" %}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    <p class="text-center">No featured projects to display.</p>
+                {% endif %}
+            </div>
+            <button class="scroll-button next" aria-label="Next Projects" onclick="manualScroll(1)">▶</button>
+        </div>
+    </section>
+</main>

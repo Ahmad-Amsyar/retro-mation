@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body data-cards-to-duplicate-scroller="{{ site.cards_to_duplicate_for_scroller | default: 5 }}" class="container mx-auto p-4 md:p-8 {% if page.url contains '/venue.html' %}venue-page{% endif %}">
+
+    {{ content }} <!-- This is where the specific page content will be injected -->
+
+    {% include footer.html %}
+
+    <!-- Page specific scripts can be added here or at the end of individual page files -->
+    {% if page.scripts %}
+        {% for script_file in page.scripts %}
+            <script src="{{ script_file | relative_url }}"></script>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

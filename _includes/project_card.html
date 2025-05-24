@@ -1,0 +1,32 @@
+{% comment %}
+  Expects:
+  - include.project: The project object from site.projects
+  - include.card_type: "homepage" or "gallery" (gallery is default)
+                       "homepage" has specific image height.
+{% endcomment %}
+{% assign p = include.project %}
+{% assign card_type = include.card_type | default: "gallery" %}
+
+{%- comment -%}Determine border color based on category for visual variety {%- endcomment -%}
+{%- if p.category == 'animation' -%}
+  {%- assign border_color_var = '--retro-accent' -%}          {% comment %} Red {% endcomment %}
+{%- elsif p.category == 'film' -%}
+  {%- assign border_color_var = '--retro-neon-cyan' -%}      {% comment %} Blue {% endcomment %}
+{%- elsif p.category == 'game' -%}
+  {%- assign border_color_var = '--retro-neon-yellow' -%}    {% comment %} Yellow {% endcomment %}
+{%- else -%}
+  {%- assign border_color_var = '--retro-neon-cyan' -%}      {% comment %} Default Blue {% endcomment %}
+{%- endif -%}
+
+<div class="project-card text-center rounded-lg" style="border-color: var({{ border_color_var }});">
+    <img src="{{ p.image_url | relative_url }}" alt="{{ p.project_title }} Preview"
+         class="object-cover mb-4"
+         style="border-bottom-color: var({{ border_color_var }}); {% if card_type == 'homepage' %}height: 160px;{% else %}height: 200px;{% endif %} width: 100%;">
+    <div class="card-content">
+        <div>
+            <h3 class="mb-0.5">{{ p.student_name }} - {{ p.project_title }}</h3>
+            <p class="text-sm mb-4 {% if card_type == 'homepage' %}project-card-description-homepage{% else %}project-card-description-gallery{% endif %}">{{ p.short_description | truncatewords: 15 }}</p>
+        </div>
+        <a href="{{ p.url | relative_url }}" class="view-project-button">View</a>
+    </div>
+</div>

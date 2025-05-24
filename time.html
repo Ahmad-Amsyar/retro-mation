@@ -1,0 +1,63 @@
+---
+title: Schedule
+layout: default
+scripts:
+  - "/assets/js/time_tabs.js"
+---
+<header class="text-center mb-12 md:mb-20">
+    <h1 class="text-4xl md:text-6xl mb-4 uppercase">FYP Showcase Schedule</h1>
+    <a href="{{ '/' | relative_url }}" class="retro-button text-lg">< Back to Homepage</a>
+    <a href="{{ '/venue.html' | relative_url }}" class="retro-button text-lg">Venue</a>
+</header>
+
+<main>
+    <section id="event-schedule" class="info-section">
+        <h2 class="text-2xl mb-6 uppercase">Event Program</h2>
+
+        {% if site.data.schedule %}
+        <div class="day-buttons">
+            {% for day_entry in site.data.schedule %}
+                {% assign day_id = day_entry[0] %}
+                {% assign day_data = day_entry[1] %}
+                <button class="day-button {% if forloop.first %}active{% endif %}" data-day="{{ day_id }}">{{ day_data.button_text }}</button>
+            {% endfor %}
+        </div>
+
+        {% for day_entry in site.data.schedule %}
+            {% assign day_id = day_entry[0] %}
+            {% assign day_data = day_entry[1] %}
+            <div id="{{ day_id }}-schedule" class="schedule-table-container {% if forloop.first %}active{% endif %}">
+                 <div class="table-responsive-container">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Event / Project</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in day_data.events %}
+                            <tr>
+                                <td>{{ item.time }}</td>
+                                <td>{{ item.event }}</td>
+                                <td>{{ item.description }}</td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="3" class="text-center">No events scheduled for this day.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                 </div>
+            </div>
+        {% endfor %}
+        {% else %}
+            <p class="text-center">Schedule data not found. Please check `_data/schedule.yml`.</p>
+        {% endif %}
+
+        <p class="mt-6 text-sm italic" style="color: var(--retro-text);"> (Check back closer to the event date for the finalized, detailed schedule!)
+        </p>
+    </section>
+</main>

@@ -1,0 +1,41 @@
+---
+title: Project Gallery
+layout: default
+scripts:
+  - "/assets/js/bigshowcase_search.js"
+---
+<header class="text-center mb-12 md:mb-20">
+    <h1 class="text-4xl md:text-6xl mb-4 uppercase">Project Gallery</h1>
+    <a href="{{ '/' | relative_url }}" class="retro-button text-lg">< Back to Homepage</a>
+</header>
+
+<main>
+    <section id="project-gallery" class="mb-12">
+        <h2 class="text-2xl mb-6 uppercase text-center">Featured Projects</h2>
+
+        <input type="text" id="search-input" class="search-input" placeholder="Search projects by title, student, or description...">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-list">
+            <!-- Projects will be loaded here by JavaScript -->
+            {% if site.projects.size == 0 %}
+            <p class="text-center col-span-full">No projects found. Add projects to the _projects folder.</p>
+            {% endif %}
+        </div>
+    </section>
+</main>
+
+<script>
+    // This data will be used by bigshowcase_search.js
+    const allProjectsData = [
+        {% for project in site.projects %}
+        {
+            title: "{{ project.project_title | escape }}",
+            category: "{{ project.category | escape }}",
+            student: "{{ project.student_name | escape }}",
+            description: "{{ project.short_description | escape }}",
+            imageUrl: "{{ project.image_url | relative_url }}",
+            pageUrl: "{{ project.url | relative_url }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ];
+</script>
