@@ -24,7 +24,7 @@ online_links:
     url: "u450h"
   - name: "Instagram"
     url: "@mii._ry"
-  - name: "TBehanceikTok"
+  - name: "Behance"
     url: "aeisyah mohd"
 video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
 synopsis: |
