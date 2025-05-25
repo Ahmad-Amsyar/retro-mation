@@ -20,7 +20,7 @@ skills:
   - "IbisPaintX"
   - "Capcut"
 online_links:
-  - name: "X "
+  - name: "X"
     url: "u450h"
   - name: "Instagram"
     url: "@mii._ry"
@@ -32,7 +32,7 @@ synopsis: |
 
 details:
   runtime: "4 minutes 12 seconds"
-  genre: "PsyPsychological, thriller"
+  genre: "Psychological, thriller"
 directors_statement: "I love sea and the creatures inside, so I want to make an animation that include this element. I also think that a lot of people around my age struggle with their mental health so I want to give them a message in my short animation."
 gallery_images:
   - "/assets/images/projects/01-aeisyah/calcifer.webp"

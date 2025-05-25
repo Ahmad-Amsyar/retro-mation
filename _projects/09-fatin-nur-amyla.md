@@ -5,7 +5,7 @@ student_name: "Fatin Nur Amyla Bt Wan Hussin"
 project_title: "Consumed by Hunger"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "While exploring the wilderness, Ethan stumbles upon a hidden passage that leads him to a breathtaking underground magical lake."
 image_url: "/assets/images/projects/09-fatin-nur-amyla/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights

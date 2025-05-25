@@ -5,7 +5,7 @@ student_name: "Hasyimah Amirah Binti Hasan"
 project_title: "Echo In The Mist"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "Intrigued by his grandfather's story of a mysterious guardian haunting the misty waters of Lake Kenyir, Adam, a curious teenager, sets out to uncover the truth."
 image_url: "/assets/images/projects/10-hasyimah-amirah/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights
@@ -29,7 +29,7 @@ synopsis: |
 details:
   runtime: "3 minutes"
   genre: "Thriller, Mystery"
-directors_statement: "TTasik Kenyir and the hornbill are iconic parts of Malaysia’s natural and cultural heritage.  I wanted to bring a sense of mystery and wonder to younger audiences while preserving the atmosphere of Malaysian folklore."
+directors_statement: "Tasik Kenyir and the hornbill are iconic parts of Malaysia’s natural and cultural heritage.  I wanted to bring a sense of mystery and wonder to younger audiences while preserving the atmosphere of Malaysian folklore."
 gallery_images:
   - "/assets/images/projects/10-hasyimah-amirah/Castle-Emperor-Merrisa.webp"
   - "/assets/images/projects/10-hasyimah-amirah/Concept-Art.webp"

@@ -5,7 +5,7 @@ student_name: "Azfar Bin Abdul Razak"
 project_title: "Mairuha"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "Deep within the rainforest, where myths whisper through the leaves and shadows move with purpose, a young man named Rohan finds himself at a crossroads."
 image_url: "/assets/images/projects/06-azfar/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights

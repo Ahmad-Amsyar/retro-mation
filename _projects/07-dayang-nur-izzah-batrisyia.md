@@ -5,7 +5,7 @@ student_name: "Dayang Nur Izzah Batrisyia binti Awang Abdul Sahar"
 project_title: "KINARA: THE RIMBAUAN MAIDEN"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "Kinara, Goddess  of the Rimbauan Forest spending her time leisurely with the nature which she considers her child and home."
 image_url: "/assets/images/projects/07-dayang-nur-izzah-batrisyia/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights

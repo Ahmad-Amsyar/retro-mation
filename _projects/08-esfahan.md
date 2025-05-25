@@ -5,7 +5,7 @@ student_name: "Esfahan bin Rostam Zulkhairi"
 project_title: "Tukang Tarik"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "In the cyberpunk city of Nu-Santara, two neo-exorcists, Bulan and Suria, cleanse the streets of malevolent spirits."
 image_url: "/assets/images/projects/08-esfahan/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights

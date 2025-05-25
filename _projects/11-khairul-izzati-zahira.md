@@ -5,7 +5,7 @@ student_name: "KHAIRUL IZZATI ZAHIRA BINTI KHAIRUL ANUAR"
 project_title: "Techno Peril"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "Techno Peril is a story revolving a girl named Katie, who loves to wear her headphone all day long."
 image_url: "/assets/images/projects/11-khairul-izzati-zahira/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights

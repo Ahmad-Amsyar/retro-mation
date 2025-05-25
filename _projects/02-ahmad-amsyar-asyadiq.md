@@ -5,7 +5,7 @@ student_name: "Ahmad Amsyar Asyadiq bin Syaiful Bahri"
 project_title: "Robot Wau"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "In a quiet field, a curious robot named Retriever dreams of flying a traditional Malaysian WAU kite but lacks the necessary technique."
 image_url: "/assets/images/projects/02-ahmad-amsyar-asyadiq/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights

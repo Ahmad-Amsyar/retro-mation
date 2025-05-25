@@ -5,7 +5,7 @@ student_name: "Alif Aiman Bin Basarulhisham"
 project_title: "The Midnight Painter"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "A young artist, struggling with creative burnout, is pulled into her unfinished painting, entering a colourless world that mirrors her doubts."
 image_url: "/assets/images/projects/05-alif-aiman/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights

@@ -5,7 +5,7 @@ student_name: "AIDY SHAUFY BIN HAROLD ANUAR"
 project_title: "Royal Rivalry"
 
 # For homepage highlights and bigshowcase cards
-short_description: "Maya goes to the seaside to find peace after a hard day."
+short_description: "In the ancient Kingdom of Zhongchu, two royal brothers which are Zayn and Shein, are forced to battle for the throne after the death of their father."
 image_url: "/assets/images/projects/04-aidy-shaufy/dp.webp" # Card image
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights
