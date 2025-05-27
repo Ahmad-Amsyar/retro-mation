@@ -1,16 +1,14 @@
 ---
-title: Homepage (New Colour Theme)
+title: Homepage # Changed for dynamic tab title
 layout: default
 scripts:
   - "/assets/js/homepage_scroller.js"
 ---
 <header class="text-center mb-12 md:mb-20">
-    <h1 class="text-4xl md:text-5xl mb-4 uppercase">Animasi FYP Showcase</h1>
-    <!-- Corrected: Used site.time with plus filter for next year -->
-    <p class="text-xl md:text-2xl mb-2" style="font-family: 'Press Start 2P', cursive; color: var(--retro-neon-pink);">Retro Edition {{ site.time | date: '%Y' | plus: 1 }}!</p>
+    <h1 class="text-4xl md:text-5xl mb-4 uppercase">FYP ANIMATION SHOWCASE</h1> <!-- Changed Title -->
+    <p class="text-xl md:text-2xl mb-2" style="font-family: 'Press Start 2P', cursive; color: var(--retro-neon-pink);">Final Year Project Animation Showcase</p> <!-- Changed Subtitle -->
     <div class="mb-8">
         <img src="https://placehold.co/600x300/F6CB0B/010002?text=Awesome+Animation+Here!" alt="Featured Animation Visual" class="mx-auto border-4 border-retro-neon-yellow shadow-lg shadow-retro-neon-yellow/30">
-        <!-- Or use a local image: <img src="{{ '/assets/images/featured-animation.jpg' | relative_url }}" ... > -->
     </div>
     <div class="flex justify-center items-center flex-wrap gap-4">
         <a href="{{ '/bigshowcase.html' | relative_url }}" class="retro-button text-lg">Explore All Projects ></a>
@@ -24,10 +22,9 @@ scripts:
          <section id="info" class="event-info-section">
              <h2 class="text-2xl md:text-3xl mb-6 uppercase">Event Info</h2>
              <div class="rounded-md">
-                 <!-- Corrected: Used site.time with plus filter for next year -->
-                 <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Date:</strong> April 15-17, {{ site.time | date: '%Y' | plus: 1 }}</p>
+                 <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Date:</strong> June 18-19, 2025</p> <!-- Changed Date -->
                  <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Time:</strong> 10:00 AM - 6:00 PM Daily</p>
-                 <p class="text-lg"><strong style="color: var(--retro-neon-cyan);">Venue:</strong> Online! Explore anytime via this website.</p>
+                 <p class="text-lg"><strong style="color: var(--retro-neon-cyan);">Venue:</strong> Bestari Lecture Hall, Level 2, UniKL MIIT.</p> <!-- Changed Venue -->
              </div>
         </section>
 

@@ -1,10 +1,23 @@
-title: FYP Showcase (New Colour Theme)
+title: FYP Showcase (New Colour Theme) # This is a fallback title
 description: Animasi FYP Showcase - Retro Edition 2025!
-baseurl: "retro-mation" # If your site is at the root of a domain (e.g., example.com)
-url: "https://Ahmad-Amsyar.github.io" # Your site's full URL (e.g., https://username.github.io or http://localhost:4000 for testing)
-# If deploying to GitHub Pages at username.github.io/reponame, set:
-# baseurl: "/reponame"
-# url: "https://username.github.io"
+site_brand_name: "Retro-Mation" # For dynamic tab titles
+
+# --- GitHub Pages Configuration ---
+# IMPORTANT: Adjust these based on your repository type and name
+#
+# Option 1: Project Site (e.g., YourUsername.github.io/repository-name)
+#   - Your repository name is 'retro-mation'
+#   - Your username is 'Ahmad-Amsyar'
+baseurl: "/retro-mation" # Must start with a slash and match your repository name
+url: "https://Ahmad-Amsyar.github.io" # Your main GitHub Pages domain
+
+# Option 2: User/Organization Site (e.g., YourUsername.github.io)
+#   - If your repository is named EXACTLY 'YourUsername.github.io'
+# baseurl: ""
+# url: "https://YourUsername.github.io"
+#
+# --- End GitHub Pages Configuration ---
+
 
 # Define the projects collection
 collections:
@@ -26,6 +39,9 @@ defaults:
       type: "projects" # Target items in the 'projects' collection
     values:
       layout: "project_detail"
+      # You could also add default page.title for projects here if needed,
+      # e.g. page.title: "{{ page.project_title }}"
+      # but it's already set in the project .md files.
 
 # Exclude from processing.
 exclude:

@@ -1,5 +1,5 @@
 ---
-layout: default # This layout itself uses the default.html layout
+layout: default
 ---
 <div class="mb-6">
     <a href="{{ '/bigshowcase.html' | relative_url }}" class="retro-button">< Back to Showcase</a>
@@ -31,11 +31,22 @@ layout: default # This layout itself uses the default.html layout
 
             {% if page.online_links %}
             <h4 class="mb-2">Find Me Online:</h4>
-            <p class="showcase-section-paragraph">
+            <div class="showcase-section-paragraph"> <!-- Changed <p> to <div> for multiple <br> -->
                 {% for link_item in page.online_links %}
-                    <a href="{{ link_item.url }}" target="_blank" class="hover:text-retro-accent">[{{ link_item.name }}]</a>{% unless forloop.last %} | {% endunless %}
+                    <strong>{{ link_item.name }}:</strong>
+                    {% assign link_url = link_item.url %}
+                    {% if link_url contains "mailto:" %}
+                        <a href="{{ link_url }}" class="hover:text-retro-accent">{{ link_url | remove_first: "mailto:" }}</a>
+                    {% elsif link_url contains "@" and link_url contains "." and link_url contains "mailto:" == false %}
+                        <a href="mailto:{{ link_url }}" class="hover:text-retro-accent">{{ link_url }}</a>
+                    {% elsif link_url contains "http://" or link_url contains "https://" %}
+                        <a href="{{ link_url }}" target="_blank" class="hover:text-retro-accent">{{ link_url }}</a>
+                    {% else %}
+                        {{ link_url }} <!-- Display as text if not a clear URL/email -->
+                    {% endif %}
+                    <br>
                 {% endfor %}
-            </p>
+            </div>
             {% endif %}
         </section>
     </div>
@@ -83,7 +94,7 @@ layout: default # This layout itself uses the default.html layout
     </div>
 </main>
 
-<!-- Modal for image gallery (copied from your showcase.html) -->
+<!-- Modal for image gallery (copied from showcase.html) -->
 <div id="image-modal" class="modal-overlay">
     <div class="modal-content">
         <img id="enlarged-image" src="" alt="Enlarged Project Image">
