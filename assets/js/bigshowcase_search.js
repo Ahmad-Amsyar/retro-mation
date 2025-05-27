@@ -1,11 +1,19 @@
 // assets/js/bigshowcase_search.js
+
+// Helper function to convert a string to Title Case
+function toTitleCase(str) {
+    if (!str) return '';
+    return str.toLowerCase().split(' ').map(function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(' ');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Ensure allProjectsData is available from the inline script in bigshowcase.html
     if (typeof allProjectsData === 'undefined') {
         console.error("allProjectsData is not defined. Make sure it's included in bigshowcase.html");
         return;
     }
-    const projects = allProjectsData; // Use the data injected by Jekyll
+    const projects = allProjectsData;
 
     const projectListContainer = document.getElementById('project-list');
     const searchInput = document.getElementById('search-input');
@@ -34,16 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (project.category === 'film') borderColorVar = '--retro-neon-cyan';
             else if (project.category === 'game') borderColorVar = '--retro-neon-yellow';
 
-            // Construct HTML to match _includes/project_card.html structure and classes
-            // This structure should now pick up the styles correctly from style.css
+            const titleCasedStudentName = toTitleCase(project.student);
+            const titleCasedProjectTitle = toTitleCase(project.title);
+
             const projectCardHTML = `
                 <div class="project-card text-center rounded-lg" style="border-color: var(${borderColorVar});">
-                    <img src="${project.imageUrl}" alt="${project.title} Preview"
+                    <img src="${project.imageUrl}" alt="${titleCasedProjectTitle} Preview"
                          class="object-cover mb-4"
                          style="border-bottom-color: var(${borderColorVar}); height: 200px; width: 100%;">
                     <div class="card-content">
                         <div>
-                            <h3 class="mb-0.5">${project.student} - ${project.title}</h3>
+                            <h3 class="mb-0.5">${titleCasedStudentName} - ${titleCasedProjectTitle}</h3>
                             <p class="text-sm mb-4 project-card-description-gallery">${(project.description || '').substring(0, 100)}${(project.description || '').length > 100 ? '...' : ''}</p>
                         </div>
                         <a href="${project.pageUrl}" class="view-project-button">View</a>
@@ -61,6 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Initial display
     displayProjects();
 });

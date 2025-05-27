@@ -24,7 +24,17 @@
          style="border-bottom-color: var({{ border_color_var }}); {% if card_type == 'homepage' %}height: 160px;{% else %}height: 200px;{% endif %} width: 100%;">
     <div class="card-content">
         <div>
-            <h3 class="mb-0.5">{{ p.student_name }} - {{ p.project_title }}</h3>
+            <h3 class="mb-0.5">
+                {% assign student_name_parts = p.student_name | split: " " %}
+                {% for part in student_name_parts %}
+                    {{ part | capitalize }}{% unless forloop.last %} {% endunless %}
+                {% endfor %}
+                -
+                {% assign project_title_parts = p.project_title | split: " " %}
+                {% for part in project_title_parts %}
+                    {{ part | capitalize }}{% unless forloop.last %} {% endunless %}
+                {% endfor %}
+            </h3>
             <p class="text-sm mb-4 {% if card_type == 'homepage' %}project-card-description-homepage{% else %}project-card-description-gallery{% endif %}">{{ p.short_description | truncatewords: 15 }}</p>
         </div>
         <a href="{{ p.url | relative_url }}" class="view-project-button">View</a>
