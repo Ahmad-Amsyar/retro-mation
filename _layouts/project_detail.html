@@ -12,7 +12,8 @@ layout: default
     <div class="lg:col-span-1">
         <section class="showcase-section">
             {% if page.student_photo_url %}
-            <img src="{{ page.student_photo_url | relative_url }}" alt="Photo of {{ page.student_name }}" class="w-full max-w-xs mx-auto mb-6 border-4 border-retro-neon-cyan rounded-full shadow-lg shadow-retro-neon-cyan/30">
+            <!-- Changed max-w-xs to responsive max-width -->
+            <img src="{{ page.student_photo_url | relative_url }}" alt="Photo of {{ page.student_name }}" class="w-full max-w-xs md:max-w-sm lg:max-w-md mx-auto mb-6 border-4 border-retro-neon-cyan rounded-full shadow-lg shadow-retro-neon-cyan/30">
             {% endif %}
 
             <h4 class="mb-2">Introduction:</h4>
@@ -21,7 +22,7 @@ layout: default
             </div>
 
             {% if page.skills %}
-            <h4 class="mb-2">Software:</h4> <!-- Changed "Skills / Software" to "Software" -->
+            <h4 class="mb-2">Software:</h4>
             <ul class="list-disc list-inside mb-4">
                 {% for skill in page.skills %}
                 <li>{{ skill }}</li>
@@ -31,7 +32,7 @@ layout: default
 
             {% if page.online_links %}
             <h4 class="mb-2">Find Me Online:</h4>
-            <div class="showcase-section-paragraph"> <!-- This class should ensure consistent font size -->
+            <div class="showcase-section-paragraph">
                 {% for link_item in page.online_links %}
                     <strong>{{ link_item.name }}:</strong>
                     {% assign link_url = link_item.url %}
@@ -77,8 +78,8 @@ layout: default
 
             {% if page.directors_statement %}
             <h4 class="mb-2">Director's Statement:</h4>
-            <div class="mb-6 italic showcase-section-paragraph">
-                "{{ page.directors_statement | markdownify }}" - {{ page.student_name }}
+            <div class="mb-6 italic showcase-section-paragraph director-statement-text"> <!-- Added class for specific styling -->
+                <span class="quote-mark">"</span>{{ page.directors_statement | markdownify | remove_first: '<p>' | remove_last: '</p>' | strip_html | strip_newlines }}<span class="quote-mark">"</span> - {{ page.student_name }}
             </div>
             {% endif %}
 
@@ -97,16 +98,15 @@ layout: default
 <!-- Modal for image gallery -->
 <div id="image-modal" class="modal-overlay">
     <div class="modal-content">
-        <!-- The image itself -->
         <img id="enlarged-image" src="" alt="Enlarged Project Image">
     </div>
-    <!-- Navigation buttons moved outside .modal-content for easier positioning relative to viewport/overlay -->
     <button id="prev-image" class="modal-nav-button prev">◀</button>
     <button id="next-image" class="modal-nav-button next">▶</button>
     <button id="close-modal" class="modal-close-button">×</button>
 </div>
 
 <script>
+// ... (JavaScript remains the same as previous version) ...
 // Get the gallery container
 const galleryContainer = document.getElementById('gallery-container');
 const galleryImageUrls = [];
@@ -157,7 +157,6 @@ if (galleryContainer) {
 if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
 if (imageModal) {
     imageModal.addEventListener('click', (event) => {
-        // Close if clicking on the overlay, but not on the image or nav/close buttons themselves
         if (event.target === imageModal) {
             closeModal();
         }
