@@ -1,0 +1,4 @@
+# _data/homepage_content.yml
+
+header_video_embed: '<div style="padding:56.31% 0 0 0;position:relative;"><iframe id="homepage-vimeo-player" src="https://player.vimeo.com/video/1088128657?h=d3157d8448&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=0&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Retro-Mation Animated FYP Logo"></iframe></div>'
+vimeo_player_api_script: '<script src="https://player.vimeo.com/api/player.js"></script>'
