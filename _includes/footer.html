@@ -1,5 +1,5 @@
 <footer class="text-center mt-12 md:mt-20 text-sm">
-    <p>© {% now '%Y' %} Retro-Mation FYP Animation Students. All rights reserved.</p>
+    <p>© {{ site.time | date: '%Y' }} FYP Animation Students. All rights reserved.</p> <!-- Changed here -->
     <p class="mt-2">
         <a href="{{ '/' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Home</a> |
         <a href="{{ '/bigshowcase.html' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Showcase</a> |
