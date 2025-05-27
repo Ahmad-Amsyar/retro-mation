@@ -2,8 +2,7 @@
 title: Venue
 layout: default
 scripts:
-  - "/assets/js/venue_tabs.js" 
-  # We might add another script for the floor map modal or integrate into venue_tabs.js
+  - "/assets/js/venue_tabs.js"
 ---
 <header class="text-center mb-12 md:mb-20">
     <h1 class="text-4xl md:text-6xl mb-4 uppercase">FYP Showcase Venue</h1>
@@ -62,32 +61,34 @@ scripts:
         <div id="floor-map-content" class="venue-content-section text-center" style="display: none;">
             <h3 class="text-2xl md:text-3xl mb-6 uppercase venue-page-h3-style">Exhibition Layout & Booth List</h3>
 
-            <!-- Desktop Horizontal Layout -->
-            <div class="floor-map-desktop-container hidden md:flex md:flex-row md:justify-around md:items-start gap-4">
-                <div class="floor-map-image-wrapper">
-                    <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main">
-                </div>
-                <div class="floor-map-image-wrapper">
-                    <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list">
-                </div>
-                <div class="floor-map-image-wrapper">
-                    <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list">
-                </div>
-            </div>
-
-            <!-- Mobile Two-Column Layout -->
-            <div class="floor-map-mobile-container md:hidden flex flex-row gap-2">
-                <div class="floor-map-mobile-left w-1/2">
+            <div class="floor-map-container"> <!-- Added a general container for all floor map layouts -->
+                <!-- Desktop Horizontal Layout -->
+                <div class="floor-map-desktop-container hidden md:flex md:flex-row md:justify-around md:items-start gap-4">
                     <div class="floor-map-image-wrapper">
-                         <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main-mobile">
+                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main">
+                    </div>
+                    <div class="floor-map-image-wrapper">
+                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list">
+                    </div>
+                    <div class="floor-map-image-wrapper">
+                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list">
                     </div>
                 </div>
-                <div class="floor-map-mobile-right w-1/2 flex flex-col gap-2">
-                    <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper">
-                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list-mobile">
+
+                <!-- Mobile Two-Column Layout -->
+                <div class="floor-map-mobile-container md:hidden flex flex-row gap-2">
+                    <div class="floor-map-mobile-left w-1/2">
+                        <div class="floor-map-image-wrapper">
+                             <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main-mobile">
+                        </div>
                     </div>
-                    <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper">
-                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list-mobile">
+                    <div class="floor-map-mobile-right w-1/2 flex flex-col gap-2">
+                        <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper">
+                            <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list-mobile">
+                        </div>
+                        <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper">
+                            <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list-mobile">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,14 +98,11 @@ scripts:
     </section>
 </main>
 
-<!-- Re-use or adapt the modal from project_detail.html -->
-<!-- We'll call this 'page-modal' to avoid ID conflicts if project_detail modal was on same page (not in this setup) -->
 <div id="page-image-modal" class="modal-overlay">
     <div class="modal-content">
         <img id="enlarged-page-image" src="" alt="Enlarged Image">
     </div>
-    <!-- For floor maps, we might not need prev/next if each image is opened independently -->
-    <!-- <button id="prev-page-image" class="modal-nav-button prev">◀</button> -->
-    <!-- <button id="next-page-image" class="modal-nav-button next">▶</button> -->
+    <button id="prev-page-image" class="modal-nav-button prev">◀</button> <!-- Enabled -->
+    <button id="next-page-image" class="modal-nav-button next">▶</button> <!-- Enabled -->
     <button id="close-page-image-modal" class="modal-close-button">×</button>
 </div>

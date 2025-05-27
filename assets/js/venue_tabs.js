@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedSection = document.getElementById(`${tabId}-content`);
             if (selectedSection) {
                 selectedSection.classList.add('active');
-                selectedSection.style.display = 'block'; // Or 'flex' if the section itself is a flex container
-                 // Special handling for mobile floor map layout
-                if (tabId === 'floor-map' && selectedSection.querySelector('.floor-map-mobile-container')) {
-                    selectedSection.style.display = 'block'; // Keep it block, internal flex handles layout
-                    // equalizeMobileFloorMapHeights(); // Call height equalization
+                // Determine display type based on whether it's the floor map for responsive layouts
+                if (tabId === 'floor-map' && selectedSection.querySelector('.floor-map-container')) {
+                     selectedSection.style.display = 'block'; // Main container is block
+                } else {
+                    selectedSection.style.display = 'block'; // Default for other tabs
                 }
             }
 
@@ -41,15 +41,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Floor Map Image Modal Functionality ---
-    const floorMapImageWrappers = document.querySelectorAll('#floor-map-content .floor-map-image-wrapper');
+    const floorMapImageElements = document.querySelectorAll('#floor-map-content .floor-map-image');
     const pageModal = document.getElementById('page-image-modal');
     const enlargedPageImage = document.getElementById('enlarged-page-image');
     const closePageModalButton = document.getElementById('close-page-image-modal');
+    const prevPageImageButton = document.getElementById('prev-page-image'); // Get Prev button
+    const nextPageImageButton = document.getElementById('next-page-image'); // Get Next button
 
-    if (pageModal && enlargedPageImage && closePageModalButton) {
-        function openPageModal(imageUrl) {
+    const floorMapImageSources = [];
+    let currentFloorMapImageIndex = 0;
+
+    // Populate floorMapImageSources array
+    floorMapImageElements.forEach(imgElement => {
+        if (imgElement.dataset.src) {
+            floorMapImageSources.push(imgElement.dataset.src);
+        } else {
+            floorMapImageSources.push(imgElement.src); // Fallback
+        }
+    });
+    // Remove duplicates if any image source appears multiple times (e.g. main map in desktop and mobile)
+    const uniqueFloorMapImageSources = [...new Set(floorMapImageSources)];
+
+
+    if (pageModal && enlargedPageImage && closePageModalButton && prevPageImageButton && nextPageImageButton) {
+        function openPageModal(imageUrl, index) {
             enlargedPageImage.src = imageUrl;
+            currentFloorMapImageIndex = index;
             pageModal.classList.add('visible');
+            // Show/hide nav buttons based on whether there are multiple images
+            if (uniqueFloorMapImageSources.length > 1) {
+                prevPageImageButton.style.display = 'flex';
+                nextPageImageButton.style.display = 'flex';
+            } else {
+                prevPageImageButton.style.display = 'none';
+                nextPageImageButton.style.display = 'none';
+            }
         }
 
         function closePageModal() {
@@ -57,55 +83,56 @@ document.addEventListener('DOMContentLoaded', () => {
             enlargedPageImage.src = '';
         }
 
-        floorMapImageWrappers.forEach(wrapper => {
+        function showPrevPageImage() {
+            if (uniqueFloorMapImageSources.length === 0) return;
+            currentFloorMapImageIndex = (currentFloorMapImageIndex - 1 + uniqueFloorMapImageSources.length) % uniqueFloorMapImageSources.length;
+            enlargedPageImage.src = uniqueFloorMapImageSources[currentFloorMapImageIndex];
+        }
+
+        function showNextPageImage() {
+            if (uniqueFloorMapImageSources.length === 0) return;
+            currentFloorMapImageIndex = (currentFloorMapImageIndex + 1) % uniqueFloorMapImageSources.length;
+            enlargedPageImage.src = uniqueFloorMapImageSources[currentFloorMapImageIndex];
+        }
+
+        // Add click listeners to image wrappers (or images themselves)
+        document.querySelectorAll('#floor-map-content .floor-map-image-wrapper').forEach(wrapper => {
             wrapper.addEventListener('click', () => {
                 const imgElement = wrapper.querySelector('.floor-map-image');
+                let clickedSrc = '';
                 if (imgElement && imgElement.dataset.src) {
-                    openPageModal(imgElement.dataset.src);
+                    clickedSrc = imgElement.dataset.src;
                 } else if (imgElement) {
-                    openPageModal(imgElement.src); // Fallback to src if data-src not found
+                    clickedSrc = imgElement.src;
+                }
+                
+                const index = uniqueFloorMapImageSources.indexOf(clickedSrc);
+                if (index !== -1) {
+                    openPageModal(clickedSrc, index);
                 }
             });
         });
 
         closePageModalButton.addEventListener('click', closePageModal);
+        prevPageImageButton.addEventListener('click', showPrevPageImage);
+        nextPageImageButton.addEventListener('click', showNextPageImage);
 
         pageModal.addEventListener('click', (event) => {
-            if (event.target === pageModal) { // Click on overlay itself
+            if (event.target === pageModal) {
                 closePageModal();
             }
         });
 
         document.addEventListener('keydown', (event) => {
-            if (pageModal.classList.contains('visible') && event.key === 'Escape') {
-                closePageModal();
+            if (pageModal.classList.contains('visible')) {
+                if (event.key === 'Escape') {
+                    closePageModal();
+                } else if (event.key === 'ArrowLeft' && uniqueFloorMapImageSources.length > 1) {
+                    showPrevPageImage();
+                } else if (event.key === 'ArrowRight' && uniqueFloorMapImageSources.length > 1) {
+                    showNextPageImage();
+                }
             }
         });
     }
-
-    // --- Optional: Equalize heights for mobile floor map (can be tricky) ---
-    // function equalizeMobileFloorMapHeights() {
-    //     const mobileContainer = document.querySelector('.floor-map-mobile-container');
-    //     if (!mobileContainer || window.innerWidth >= 768) return; // Only run on mobile
-
-    //     const leftMapImage = mobileContainer.querySelector('.floor-map-mobile-left .floor-map-main-mobile');
-    //     const rightListWrappers = mobileContainer.querySelectorAll('.floor-map-mobile-right .floor-map-list-mobile-wrapper');
-
-    //     if (leftMapImage && rightListWrappers.length > 0) {
-    //         // Ensure images are loaded to get correct height, or use a fixed aspect ratio for left image
-    //         // This might need to be called after images are loaded, or rely on CSS aspect ratios
-    //         const leftHeight = leftMapImage.offsetHeight;
-            
-    //         if (leftHeight > 0) {
-    //             const perListHeight = leftHeight / rightListWrappers.length;
-    //             rightListWrappers.forEach(wrapper => {
-    //                 wrapper.style.height = `${perListHeight}px`;
-    //                 // The img inside will be object-fit: cover/contain as per CSS
-    //             });
-    //         }
-    //     }
-    // }
-    // // Call it on load and resize, potentially debounced
-    // window.addEventListener('resize', equalizeMobileFloorMapHeights);
-    // // Initial call might need to be delayed or tied to tab switch if display:none affects offsetHeight
 });

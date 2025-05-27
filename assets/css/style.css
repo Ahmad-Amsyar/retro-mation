@@ -38,7 +38,7 @@ h1 { color: var(--retro-neon-pink); text-shadow: 2px 2px var(--retro-neon-cyan);
 h2 { color: var(--retro-neon-pink); text-shadow: 2px 2px var(--retro-neon-yellow); }
 
 .project-card h3,
-.showcase-section > h3 { /* Targets H3 for "Project Title" in showcase */
+.showcase-section > h3 {
     font-family: 'VT323', monospace;
     color: var(--retro-neon-pink);
     text-shadow: none;
@@ -47,17 +47,16 @@ h2 { color: var(--retro-neon-pink); text-shadow: 2px 2px var(--retro-neon-yellow
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
-.showcase-section > h3 { margin-bottom: 1.5rem; } /* Specific for "Project Title" heading */
+.showcase-section > h3 { margin-bottom: 1.5rem; }
 
-.venue-page h3, /* For H3s specifically on the venue page (e.g. section titles) */
-.venue-page-h3-style { /* For specific h3s like "Access Details", "Map Location", "Floor Map Titles" */
+.venue-page h3,
+.venue-page-h3-style {
     color: var(--retro-neon-pink);
     text-shadow: 2px 2px var(--retro-neon-yellow);
-    font-size: 1.5rem; /* To match H2 on venue page if needed, or adjust */
-    font-family: var(--font-pixel); /* Ensure pixel font for these H3s */
-    /* margin-bottom for these H3s is handled by Tailwind or specific context */
+    font-size: 1.5rem;
+    font-family: var(--font-pixel);
 }
-h4 { /* For subheadings like Introduction, Software, Synopsis etc. */
+h4 {
     color: var(--retro-neon-cyan);
     text-shadow: none;
     font-size: 1.3em;
@@ -78,7 +77,7 @@ a:hover {
 
 /* --- PARAGRAPH STYLING & SHOWCASE SECTION SPECIFICS --- */
 .showcase-section p,
-.venue-page .info-section p, /* Paragraphs in venue page "How to get here" */
+.venue-page .info-section p,
 .schedule-table td,
 .event-info-section p,
 .showcase-section-paragraph,
@@ -88,16 +87,10 @@ a:hover {
     color: var(--retro-text);
     margin-bottom: 1rem;
 }
-.director-statement-text {
-    font-style: italic;
-}
-
+.director-statement-text { font-style: italic; }
 .event-info-section p { line-height: 1.8; }
-
 .showcase-section-paragraph p { margin-bottom: 0.5em; }
 .showcase-section-paragraph p:last-child { margin-bottom: 0; }
-
-
 #overview p {
     text-shadow: 1px 1px 0 var(--retro-bg);
     font-size: 1.8rem;
@@ -119,56 +112,36 @@ a:hover {
     display: inline-block;
     text-decoration: none;
 }
-.retro-button {
-    background-color: var(--retro-accent);
-    padding: 12px 24px;
-}
+.retro-button { background-color: var(--retro-accent); padding: 12px 24px; }
 .retro-button-sm {
-    background-color: var(--retro-neon-cyan);
-    padding: 8px 16px;
-    border-width: 2px;
-    box-shadow: 3px 3px 0 var(--retro-text);
-    font-size: 0.8rem;
-    margin: 0 0.5rem;
+    background-color: var(--retro-neon-cyan); padding: 8px 16px;
+    border-width: 2px; box-shadow: 3px 3px 0 var(--retro-text);
+    font-size: 0.8rem; margin: 0 0.5rem;
 }
 .retro-button:hover {
-    background-color: var(--retro-neon-cyan);
-    color: var(--retro-text);
-    box-shadow: 4px 4px 0 var(--retro-neon-yellow);
-    border-color: var(--retro-neon-yellow);
+    background-color: var(--retro-neon-cyan); color: var(--retro-text);
+    box-shadow: 4px 4px 0 var(--retro-neon-yellow); border-color: var(--retro-neon-yellow);
     transform: translate(-2px, -2px);
 }
 .retro-button-sm:hover {
-    background-color: var(--retro-neon-yellow);
-    color: var(--retro-text);
-    box-shadow: 3px 3px 0 var(--retro-accent);
-    border-color: var(--retro-accent);
+    background-color: var(--retro-neon-yellow); color: var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-accent); border-color: var(--retro-accent);
     transform: translate(-1px, -1px);
 }
 .retro-button:active, .retro-button-sm:active {
-     transform: translate(2px, 2px);
-     box-shadow: 1px 1px 0 var(--retro-text);
+     transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--retro-text);
 }
-.retro-button-sm:active {
-    transform: translate(1px, 1px);
-}
+.retro-button-sm:active { transform: translate(1px, 1px); }
 
 /* --- SECTIONS --- */
-.info-section,
-.showcase-section,
-.event-info-section {
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    border: 3px solid var(--retro-neon-cyan);
+.info-section, .showcase-section, .event-info-section {
+    background-color: rgba(0, 0, 0, 0.1); padding: 1.5rem;
+    margin-bottom: 2rem; border-radius: 8px; border: 3px solid var(--retro-neon-cyan);
 }
 .event-info-section {
-    border-color: var(--retro-accent);
-    text-align: center;
+    border-color: var(--retro-accent); text-align: center;
     max-width: 100%; width: 100%; box-sizing: border-box;
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 0 0 5px var(--retro-accent);
+    transition: box-shadow 0.3s ease-in-out; box-shadow: 0 0 5px var(--retro-accent);
 }
 .event-info-section:hover {
     box-shadow: 0 0 15px var(--retro-accent), 0 0 20px var(--retro-accent), 0 0 25px var(--retro-accent);
@@ -185,8 +158,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s ease 0.3s;
     border-radius: 8px; display: flex; flex-direction: column;
-    text-align: center; overflow: hidden;
-    border-width: 3px; border-style: solid;
+    text-align: center; overflow: hidden; border-width: 3px; border-style: solid;
 }
 .project-card img { width: 100%; object-fit: cover; display: block; }
 .project-card .card-content {
@@ -194,8 +166,7 @@ a:hover {
     display: flex; flex-direction: column; justify-content: space-between;
 }
 .project-card p {
-    font-size: 1.375rem; line-height: 1.8;
-    margin-bottom: 1.5rem; color: var(--retro-text);
+    font-size: 1.375rem; line-height: 1.8; margin-bottom: 1.5rem; color: var(--retro-text);
 }
 .project-card .view-project-button {
     font-family: 'Press Start 2P', cursive; background-color: var(--retro-accent);
@@ -211,7 +182,7 @@ a:hover {
     transform: translate(-1px, -1px);
 }
 .project-card .view-project-button:active {
-     transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--retro-text);
+    transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--retro-text);
 }
 #featured .project-card {
     flex: 0 0 auto; width: 300px; margin-right: 1.5rem;
@@ -237,8 +208,7 @@ a:hover {
 .scroll-wrapper { position: relative; padding: 30px 40px; }
 .scroll-container {
     display: flex; overflow-x: auto; scroll-behavior: smooth;
-    padding-bottom: 1rem; scrollbar-width: none; -ms-overflow-style: none;
-    overflow-y: visible;
+    padding-bottom: 1rem; scrollbar-width: none; -ms-overflow-style: none; overflow-y: visible;
 }
 .scroll-container::-webkit-scrollbar { display: none; }
 .scroll-button {
@@ -247,9 +217,8 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.3); color: var(--retro-bg);
     border: 2px solid var(--retro-neon-cyan); box-shadow: 2px 2px 0 var(--retro-neon-pink);
     border-radius: 50%; font-family: 'Press Start 2P', cursive;
-    cursor: pointer; z-index: 10; display: flex;
-    align-items: center; justify-content: center;
-    transition: all 0.15s ease; line-height: 1;
+    cursor: pointer; z-index: 10; display: flex; align-items: center;
+    justify-content: center; transition: all 0.15s ease; line-height: 1;
 }
 .scroll-button:hover {
     background-color: rgba(0, 0, 0, 0.6); color: var(--retro-neon-yellow);
@@ -274,109 +243,75 @@ a:hover {
 }
 
 /* --- SHOWCASE PAGE Specifics (.showcase-section content) --- */
-.showcase-section ul li {
-    color: var(--retro-text);
-    font-size: 1.5rem;
-    margin-bottom: 0.25em;
-}
+.showcase-section ul li { color: var(--retro-text); font-size: 1.5rem; margin-bottom: 0.25em; }
 .showcase-section strong { color: var(--retro-text); }
 .detail-value { color: var(--retro-neon-cyan); }
-
 .quote-mark {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: var(--retro-text);
-    line-height: 0.5;
-    vertical-align: middle;
-    margin: 0 0.1em;
+    font-size: 2.5em; font-weight: bold; color: var(--retro-text);
+    line-height: 0.5; vertical-align: middle; margin: 0 0.1em;
 }
-
 .video-placeholder {
     background-color: #000; border: 3px solid var(--retro-neon-pink);
     aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center;
     color: var(--retro-neon-pink); font-family: 'Press Start 2P', cursive;
-    position: relative; cursor: pointer;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative; cursor: pointer; transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .video-placeholder:hover {
     border-color: var(--retro-neon-yellow); box-shadow: 0 0 10px var(--retro-neon-yellow);
 }
 .video-placeholder iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
-
 .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;
 }
 .image-gallery img {
-    border: 2px solid var(--retro-neon-yellow);
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    cursor: pointer;
+    border: 2px solid var(--retro-neon-yellow); width: 100%; aspect-ratio: 3 / 4;
+    object-fit: cover; cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .image-gallery img:hover {
-    transform: scale(1.05);
-    border-color: var(--retro-neon-pink);
+    transform: scale(1.05); border-color: var(--retro-neon-pink);
     box-shadow: 0 0 8px var(--retro-neon-pink);
 }
 
 /* --- MODAL STYLES (Common for project_detail and venue page modals) --- */
-/* Targets both #image-modal (project detail) and #page-image-modal (venue) */
 #image-modal.modal-overlay,
 #page-image-modal.modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    display: flex; align-items: center; justify-content: center;
-    z-index: 1000; visibility: hidden; opacity: 0;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
-    padding: 20px;
-    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.85); display: flex;
+    align-items: center; justify-content: center; z-index: 1000;
+    visibility: hidden; opacity: 0; transition: opacity 0.3s ease, visibility 0s 0.3s;
+    padding: 20px; box-sizing: border-box;
 }
 #image-modal.modal-overlay.visible,
 #page-image-modal.modal-overlay.visible {
-    visibility: visible; opacity: 1;
-    transition: opacity 0.3s ease, visibility 0s 0s;
+    visibility: visible; opacity: 1; transition: opacity 0.3s ease, visibility 0s 0s;
 }
-
 #image-modal .modal-content,
 #page-image-modal .modal-content {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+    position: relative; display: flex; align-items: center;
+    justify-content: center; width: 100%; height: 100%;
 }
-
-#image-modal .modal-content img, /* For project_detail gallery */
-#page-image-modal .modal-content img { /* For venue floor maps */
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border: 4px solid var(--retro-neon-yellow);
-    box-sizing: border-box;
+#image-modal .modal-content img,
+#page-image-modal .modal-content img { /* Applies to enlarged-image and enlarged-page-image */
+    display: block; max-width: 100%; max-height: 100%;
+    width: auto; height: auto; object-fit: contain;
+    border: 4px solid var(--retro-neon-yellow); box-sizing: border-box;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-/* Common styles for modal navigation and close buttons */
-.modal-nav-button, .modal-close-button { /* General class if used by both */
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.5); color: var(--retro-bg);
-    border-radius: 50%;
-    cursor: pointer; z-index: 1010;
-    display: flex; align-items: center; justify-content: center;
-    transition: all 0.15s ease; line-height: 1;
-}
+/* Common styles for modal navigation and close buttons if they share classes */
+/* Using specific IDs for now to ensure no conflicts */
 
-/* Specific to #image-modal (project gallery) */
+/* Project Detail Modal Nav/Close Buttons */
+#image-modal .modal-nav-button,
+#image-modal .modal-close-button {
+    position: fixed; background-color: rgba(0, 0, 0, 0.5);
+    color: var(--retro-bg); border-radius: 50%; cursor: pointer;
+    z-index: 1010; display: flex; align-items: center;
+    justify-content: center; transition: all 0.15s ease; line-height: 1;
+}
 #image-modal .modal-nav-button {
-    top: 50%; transform: translateY(-50%);
-    width: 50px; height: 50px; font-size: 2rem;
+    top: 50%; transform: translateY(-50%); width: 50px; height: 50px; font-size: 2rem;
     border: 2px solid var(--retro-neon-cyan); box-shadow: 2px 2px 0 var(--retro-neon-pink);
 }
 #image-modal .modal-nav-button:hover {
@@ -397,29 +332,48 @@ a:hover {
     box-shadow: 2px 2px 0 var(--retro-neon-yellow); border-color: var(--retro-neon-yellow);
 }
 
+/* Venue Page Modal Nav/Close Buttons */
+#page-image-modal .modal-nav-button, /* Styles for venue modal nav buttons */
+#page-image-modal .modal-close-button {
+    position: fixed; background-color: rgba(0, 0, 0, 0.5);
+    color: var(--retro-bg); border-radius: 50%; cursor: pointer;
+    z-index: 1010; display: flex; align-items: center; /* JS will toggle this for nav buttons */
+    justify-content: center; transition: all 0.15s ease; line-height: 1;
+}
+#page-image-modal .modal-nav-button {
+    top: 50%; transform: translateY(-50%); width: 50px; height: 50px; font-size: 2rem;
+    border: 2px solid var(--retro-neon-cyan); box-shadow: 2px 2px 0 var(--retro-neon-pink);
+    /* display: none; Initially hidden by JS if only one image, JS makes them flex */
+}
+#page-image-modal .modal-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); color: var(--retro-neon-yellow);
+    box-shadow: 3px 3px 0 var(--retro-neon-cyan); border-color: var(--retro-neon-yellow);
+}
+#page-image-modal .modal-nav-button.prev { left: max(20px, env(safe-area-inset-left, 20px) + 5px); }
+#page-image-modal .modal-nav-button.next { right: max(20px, env(safe-area-inset-right, 20px) + 5px); }
 
-/* Specific to #page-image-modal (venue floor maps) */
-#page-image-modal .modal-close-button { /* Assuming only close button for venue modal */
+#page-image-modal .modal-close-button {
     top: max(20px, env(safe-area-inset-top, 20px) + 5px);
     right: max(20px, env(safe-area-inset-right, 20px) + 5px);
     width: 35px; height: 35px; font-size: 1.7rem;
     background-color: var(--retro-neon-pink);
-    color: var(--retro-bg);
     border: 2px solid var(--retro-text); box-shadow: 2px 2px 0 var(--retro-text);
 }
 #page-image-modal .modal-close-button:hover {
     background-color: var(--retro-neon-cyan); color: var(--retro-text);
     box-shadow: 2px 2px 0 var(--retro-neon-yellow); border-color: var(--retro-neon-yellow);
 }
-#page-image-modal .modal-nav-button { display: none; } /* Hide nav buttons for venue modal */
 
 
 @media (max-width: 768px) {
     #image-modal.modal-overlay,
     #page-image-modal.modal-overlay { padding: 10px; }
 
-    #image-modal .modal-nav-button.prev { left: 5px; }
-    #image-modal .modal-nav-button.next { right: 5px; }
+    #image-modal .modal-nav-button.prev,
+    #page-image-modal .modal-nav-button.prev { left: 5px; }
+    #image-modal .modal-nav-button.next,
+    #page-image-modal .modal-nav-button.next { right: 5px; }
+
     #image-modal .modal-close-button,
     #page-image-modal .modal-close-button {
         top: 5px; right: 5px; width:30px; height:30px; font-size:1.5rem;
@@ -482,94 +436,96 @@ a:hover {
     background-color: var(--retro-accent); color: var(--retro-bg);
     box-shadow: 3px 3px 0 var(--retro-neon-yellow); border-color: var(--retro-neon-yellow);
 }
-.venue-content-section { display: none; }
-.venue-content-section.active { display: block; }
+.venue-content-section { display: none; } /* Hidden by default */
+.venue-content-section.active { display: block; } /* Shown when active by JS */
 
+/* This targets the main "Venue Information" section */
 .venue-page #venue-details.info-section {
     flex-grow: 1; display: flex; flex-direction: column;
 }
+/* This targets the active tab's content *within* the "Venue Information" section */
 .venue-page #venue-details.info-section .venue-content-section.active {
-    flex-grow: 1; display: flex; flex-direction: column;
+    flex-grow: 1;
+    /* display: flex; and flex-direction: column; removed from here
+       as it was causing issues with the internal Tailwind flex of how-to-get-here */
 }
+/* Ensure the "How to get here" tab content retains its internal flex layout */
 .venue-page #venue-details.info-section #how-to-get-here-content.active {
-    display: block; /* Let internal Tailwind flex handle layout */
+    display: block; /* Allows internal Tailwind flex to work */
 }
 
+
 /* --- VENUE PAGE - Floor Map Specific Layouts --- */
-#floor-map-content { /* The main container for floor map layouts */ }
+#floor-map-content .floor-map-container { /* New wrapper for floor map layouts */
+    /* Add any overall styling for the floor map area if needed */
+}
 
 .floor-map-image-wrapper {
     position: relative;
-    border: 2px solid transparent; /* For hover effect, actual image has its own border */
+    border: 2px solid transparent;
     transition: border-color 0.3s ease, transform 0.3s ease;
     cursor: zoom-in;
     overflow: hidden;
-    background-color: rgba(0,0,0,0.05); /* Slight background for the wrapper */
+    background-color: rgba(0,0,0,0.05);
 }
 .floor-map-image-wrapper:hover {
     border-color: var(--retro-neon-yellow);
-    transform: scale(1.02); /* Smaller scale for less aggressive hover */
+    transform: scale(1.02);
 }
-.floor-map-image { /* Common style for all floor map images */
+.floor-map-image {
     display: block;
     width: 100%;
-    height: 100%; /* Make image fill its wrapper for object-fit to work well */
-    object-fit: contain; /* Default, show whole image */
-    border: 2px solid var(--retro-neon-cyan); /* Inner border on the image */
-    box-shadow: 2px 2px 0 var(--retro-text); /* Retro shadow for the image */
+    height: 100%; /* Important for object-fit to work as intended within wrapper */
+    object-fit: contain;
+    border: 2px solid var(--retro-neon-cyan);
+    box-shadow: 2px 2px 0 var(--retro-text);
     box-sizing: border-box;
 }
 
 /* Desktop Floor Map Layout (Horizontal) */
 .floor-map-desktop-container {
-    /* Default is hidden, md:flex in HTML makes it visible on medium+ screens */
-    /* Tailwind classes: md:flex md:flex-row md:justify-around md:items-start gap-4 */
-    align-items: stretch; /* Make wrappers attempt same height */
+    /* Tailwind: hidden md:flex md:flex-row md:justify-around md:items-start gap-4 */
+    align-items: stretch; /* Attempt to make wrappers same height */
 }
 .floor-map-desktop-container .floor-map-image-wrapper {
-    flex: 1 1 30%; /* Allow shrink, grow, with a basis around 30% */
-    display: flex; /* To make image fill wrapper height */
-    /* max-width: 32%; /* Replaced by flex-basis */
+    flex: 1 1 30%;
+    display: flex; /* To help image fill this wrapper */
 }
 .floor-map-desktop-container .floor-map-image {
-    /* height: auto; Let wrapper and aspect ratio handle this */
-    max-height: 70vh; /* Max height for desktop images */
-    object-fit: contain;
+    max-height: 70vh; /* Constraint for desktop images */
+    /* object-fit: contain; inherited */
 }
 
 /* Mobile Floor Map Layout (Two Columns) */
 .floor-map-mobile-container {
-    /* md:hidden flex flex-row gap-2 from Tailwind */
-    align-items: stretch; /* Key for matching heights */
-    min-height: 300px; /* Give it some minimum height to work with */
+    /* Tailwind: md:hidden flex flex-row gap-2 */
+    align-items: stretch; /* Make left and right columns attempt same height */
+    min-height: 300px; /* Ensure some visible height */
 }
 .floor-map-mobile-left {
-    /* w-1/2 from Tailwind */
-    display: flex; /* Make wrapper fill */
+    /* Tailwind: w-1/2 */
+    display: flex; /* Make wrapper take full height of this column */
 }
 .floor-map-mobile-left .floor-map-image-wrapper {
     width: 100%;
-    display: flex;
+    display: flex; /* Ensure image can fill wrapper */
 }
-.floor-map-main-mobile { /* The main map image on mobile */
-    /* width: 100%; height: 100%; inherited from .floor-map-image */
-    object-fit: contain; /* Show the whole map */
+.floor-map-main-mobile {
+    /* object-fit: contain; inherited */
 }
-
 .floor-map-mobile-right {
-    /* w-1/2 flex flex-col gap-2 from Tailwind */
-    display: flex; /* Added to ensure flex properties apply */
-    flex-direction: column; /* Stack list images */
+    /* Tailwind: w-1/2 flex flex-col gap-2 */
+    display: flex; /* Ensure flex properties are applied */
+    flex-direction: column;
 }
 .floor-map-list-mobile-wrapper {
-    flex: 1; /* Key: make each list image wrapper take equal height in the right column */
-    display: flex; /* To make the image fill this wrapper */
-    min-height: 150px; /* Prevent excessive squishing of list images */
+    flex: 1; /* Distribute height equally among list wrappers */
+    display: flex; /* Allow image to fill */
+    min-height: 150px; /* Prevent over-squishing */
 }
-.floor-map-list-mobile { /* Student list images on mobile */
-    /* width: 100%; height: 100%; inherited from .floor-map-image */
-    object-fit: cover;  /* Crop to fill the wrapper's allocated space */
-    object-position: top center; /* Try to show top part of list */
+.floor-map-list-mobile {
+    object-fit: cover; /* Crop list images to fit their allocated space */
+    object-position: top center; /* Show top of the list images */
 }
 
 
@@ -582,7 +538,6 @@ a:hover {
 .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 @media (min-width: 768px) {
     .venue-page .map-container { padding-top: 0; height: 100%; }
-    /* Tailwind handles most of the md:flex-row layout for the How To Get Here section */
 }
 
 /* --- BIGSHOWCASE PAGE --- */
