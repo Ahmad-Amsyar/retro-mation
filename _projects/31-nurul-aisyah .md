@@ -42,7 +42,7 @@ gallery_images:
   - "/assets/images/projects/31-nurul-aisyah/Marius-Tears-of-Themis-birthday-series.webp"
   - "/assets/images/projects/31-nurul-aisyah/Zarith-concept-art.webp"
   - "/assets/images/projects/31-nurul-aisyah/Zayne-Love-and-Deepspace.webp"
-  - "/assets/images/projects/31-nurul-aisyah/WZhongli-Genshin-Impact.webp"
+  - "/assets/images/projects/31-nurul-aisyah/Zhongli-Genshin-Impact.webp"
   - "/assets/images/projects/31-nurul-aisyah/Childe-Genshin-Impact-commission-series.webp"
 ---
 <!-- You can add more content here in Markdown if needed, it will appear after the gallery -->

@@ -37,7 +37,7 @@ gallery_images:
   - "/assets/images/projects/18-muhammad-Idham-bin-zulkurnain/Desk-photography-1-Landscape-.jpg"
   - "/assets/images/projects/18-muhammad-Idham-bin-zulkurnain/Desk-photography-2--Landscape-.jpg"
   - "/assets/images/projects/18-muhammad-Idham-bin-zulkurnain/Distance.webp"
-  - "/assets/images/projects/18-muhammad-Idham-bin-zulkurnainIn-Lumen.jpg"
+  - "/assets/images/projects/18-muhammad-Idham-bin-zulkurnain/In-Lumen.jpg"
   - "/assets/images/projects/18-muhammad-Idham-bin-zulkurnain/Just-a-coke.jpg"
   - "/assets/images/projects/18-muhammad-Idham-bin-zulkurnain/loudness-in-silence.webp"
 ---

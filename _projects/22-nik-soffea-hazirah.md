@@ -36,7 +36,7 @@ gallery_images:
   - "/assets/images/projects/22-nik-soffea-hazirah/baihu-megido72-by-nik.webp"
   - "/assets/images/projects/22-nik-soffea-hazirah/bellpepper-by-nik.webp"
   - "/assets/images/projects/22-nik-soffea-hazirah/purson-doll-clay-mgd-72-by-nik.webp"
-  - "/assets/images/projects/22-nik-soffea-hazirah/takaharu-chill-night.jpg"
+  - "/assets/images/projects/22-nik-soffea-hazirah/takaharu-chill-night.webp"
   - "/assets/images/projects/22-nik-soffea-hazirah/usagi-clown-collab.webp"
   - "/assets/images/projects/22-nik-soffea-hazirah/yehaww.webp"
 ---

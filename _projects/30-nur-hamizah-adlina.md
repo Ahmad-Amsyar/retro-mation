@@ -38,7 +38,7 @@ gallery_images:
   - "/assets/images/projects/30-nur-hamizah-adlina/1-landscape.webp"
   - "/assets/images/projects/30-nur-hamizah-adlina/CCS.webp"
   - "/assets/images/projects/30-nur-hamizah-adlina/Illustration-test.webp"
-  - "/assets/images/projects/30-nur-hamizah-adlina/emed.webp"
+  - "/assets/images/projects/30-nur-hamizah-adlina/med.webp"
   - "/assets/images/projects/30-nur-hamizah-adlina/miu-wtrairai.webp"
   - "/assets/images/projects/30-nur-hamizah-adlina/Shot.webp"
   - "/assets/images/projects/30-nur-hamizah-adlina/Skellies-hand-holding.webp"
