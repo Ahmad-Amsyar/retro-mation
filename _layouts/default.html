@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title and page.title != "" %}{{ page.title }} | {{ site.site_brand_name }}{% else %}{{ site.site_brand_name | default: site.title }}{% endif %}</title> <!-- Changed for dynamic tab titles -->
+    <title>{% if page.title and page.title != "" %}{{ page.title }} | {{ site.site_brand_name }}{% else %}{{ site.site_brand_name | default: site.title }}{% endif %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,15 +12,19 @@
 </head>
 <body data-cards-to-duplicate-scroller="{{ site.cards_to_duplicate_for_scroller | default: 5 }}" class="container mx-auto p-4 md:p-8 {% if page.url contains '/venue.html' %}venue-page{% endif %}">
 
-    {{ content }} <!-- This is where the specific page content will be injected -->
+    {{ content }}
 
     {% include footer.html %}
 
-    <!-- Page specific scripts can be added here or at the end of individual page files -->
+    <button id="back-to-top" class="back-to-top-button" title="Go to top">▲</button>
+
+    <!-- Page specific scripts -->
     {% if page.scripts %}
         {% for script_file in page.scripts %}
             <script src="{{ script_file | relative_url }}"></script>
         {% endfor %}
     {% endif %}
+    <!-- General scripts like back_to_top -->
+    <script src="{{ '/assets/js/back_to_top.js' | relative_url }}"></script>
 </body>
 </html>

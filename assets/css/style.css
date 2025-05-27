@@ -245,22 +245,20 @@ a:hover {
 
 /* --- HOMEPAGE HEADER VIDEO --- */
 .homepage-video-wrapper {
-    max-width: 600px; /* Or your desired max-width, matching the placeholder */
-    width: 100%;      /* Make it responsive */
-    overflow: hidden; /* Recommended for iframe containers */
-    position: relative; /* Needed for the child iframe's absolute positioning */
-    background-color: #000; /* Fallback background while video loads */
-    /* Border and shadow are applied by Tailwind classes in index.html */
-    /* e.g., mx-auto border-4 border-retro-neon-yellow shadow-lg shadow-retro-neon-yellow/30 */
+    max-width: 800px; /* Increased max-width for larger video */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    /* Tailwind classes mx-auto border-4 border-retro-neon-yellow shadow-lg shadow-retro-neon-yellow/30
+       are applied in index.html to this wrapper */
 }
-/* The direct child div of .homepage-video-wrapper (from Vimeo embed) */
-.homepage-video-wrapper > div {
+.homepage-video-wrapper > div { /* Direct child div from Vimeo embed */
     /* padding-top and position: relative; are set inline by Vimeo for aspect ratio */
 }
-/* The iframe itself */
 .homepage-video-wrapper iframe {
     /* position: absolute; top:0; left:0; width:100%; height:100%; are set inline by Vimeo */
-    border: none; /* Ensure no iframe border */
+    border: none;
 }
 
 
@@ -362,7 +360,6 @@ a:hover {
 #page-image-modal .modal-nav-button {
     top: 50%; transform: translateY(-50%); width: 50px; height: 50px; font-size: 2rem;
     border: 2px solid var(--retro-neon-cyan); box-shadow: 2px 2px 0 var(--retro-neon-pink);
-    /* display: none; /* JS will control this based on image count */
 }
 #page-image-modal .modal-nav-button:hover {
     background-color: rgba(0, 0, 0, 0.8); color: var(--retro-neon-yellow);
@@ -450,21 +447,20 @@ a:hover {
     background-color: var(--retro-accent); color: var(--retro-bg);
     box-shadow: 3px 3px 0 var(--retro-neon-yellow); border-color: var(--retro-neon-yellow);
 }
-.venue-content-section { display: none; } 
-.venue-content-section.active { display: block; } 
+.venue-content-section { display: none; }
+.venue-content-section.active { display: block; }
 .venue-page #venue-details.info-section {
     flex-grow: 1; display: flex; flex-direction: column;
 }
 .venue-page #venue-details.info-section .venue-content-section.active {
     flex-grow: 1;
-    /* display: flex; and flex-direction: column; Removed for better control by inner layouts */
 }
 .venue-page #venue-details.info-section #how-to-get-here-content.active {
-    display: block; /* Let internal Tailwind flex handle layout */
+    display: block;
 }
 
 /* --- VENUE PAGE - Floor Map Specific Layouts --- */
-#floor-map-content .floor-map-container { /* Wrapper for desktop/mobile floor map layouts */ }
+#floor-map-content .floor-map-container { }
 .floor-map-image-wrapper {
     position: relative; border: 2px solid transparent;
     transition: border-color 0.3s ease, transform 0.3s ease;
@@ -519,3 +515,34 @@ footer {
     font-size: 0.875rem; color: var(--retro-text);
 }
 @media (min-width: 768px) { footer { font-size: 1rem; } }
+
+/* --- BACK TO TOP BUTTON --- */
+.back-to-top-button {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    z-index: 999; 
+    border: 2px solid var(--retro-text);
+    outline: none; 
+    background-color: var(--retro-neon-pink); 
+    color: var(--retro-bg); 
+    cursor: pointer; 
+    padding: 10px 12px; 
+    border-radius: 50%; 
+    font-size: 1.2rem; 
+    font-family: var(--font-pixel); 
+    box-shadow: 3px 3px 0 var(--retro-text);
+    transition: background-color 0.3s, transform 0.2s;
+}
+.back-to-top-button:hover {
+    background-color: var(--retro-neon-yellow); 
+    color: var(--retro-text);
+    box-shadow: 3px 3px 0 var(--retro-neon-cyan);
+    border-color: var(--retro-neon-cyan);
+    transform: translateY(-2px);
+}
+.back-to-top-button:active {
+    transform: translateY(1px);
+    box-shadow: 1px 1px 0 var(--retro-text);
+}

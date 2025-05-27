@@ -2,14 +2,12 @@
 title: Homepage
 layout: default
 scripts:
-  - "/assets/js/homepage_scroller.js" 
-  # The Vimeo player script is now loaded from the data file within the body
+  - "/assets/js/homepage_scroller.js"
 ---
 <header class="text-center mb-12 md:mb-20">
-    <h1 class="text-4xl md:text-5xl mb-4 uppercase">Retro-Mation</h1> <!-- Changed Main Title -->
+    <h1 class="text-4xl md:text-5xl mb-4 uppercase">Retro-Mation</h1>
     <p class="text-xl md:text-2xl mb-2" style="font-family: 'Press Start 2P', cursive; color: var(--retro-neon-pink);">Final Year Project Animation Showcase</p>
     <div class="mb-8 homepage-video-wrapper mx-auto border-4 border-retro-neon-yellow shadow-lg shadow-retro-neon-yellow/30">
-        <!-- Vimeo Embed from _data file -->
         {{ site.data.homepage_content.header_video_embed }}
     </div>
     <div class="flex justify-center items-center flex-wrap gap-4">
@@ -25,7 +23,7 @@ scripts:
              <h2 class="text-2xl md:text-3xl mb-6 uppercase">Event Info</h2>
              <div class="rounded-md">
                  <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Date:</strong> June 18-19, 2025</p>
-                 <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Time:</strong> 10:00 AM - 6:00 PM Daily</p>
+                 <p class="text-lg mb-2"><strong style="color: var(--retro-neon-cyan);">Time:</strong> 10:00 AM - 6:00 PM</p> <!-- Removed "Daily" -->
                  <p class="text-lg"><strong style="color: var(--retro-neon-cyan);">Venue:</strong> Bestari Lecture Hall, Level 2, UniKL MIIT.</p>
              </div>
         </section>
@@ -40,37 +38,16 @@ scripts:
 
     <section id="featured" class="mb-12 md:mb-16">
         <h2 class="text-2xl md:text-3xl mb-8 text-center uppercase">Project Highlights</h2>
-
         <div class="scroll-wrapper">
             <button class="scroll-button prev" aria-label="Previous Projects" onclick="manualScroll(-1)">◀</button>
             <div class="scroll-container" id="highlights-container">
                 {% assign featured_projects = site.projects | where: "featured", true %}
                 {% assign num_projects = featured_projects | size %}
                 {% assign cards_to_duplicate = site.cards_to_duplicate_for_scroller | default: 5 %}
-
                 {% if num_projects > 0 %}
-                    <!-- Duplicates for start (from end of list) -->
-                    {% for i in (1..cards_to_duplicate) %}
-                        {% assign project_index = num_projects | minus: cards_to_duplicate | plus: i | minus: 1 %}
-                        {% if project_index >= 0 and project_index < num_projects %}
-                            {% assign project = featured_projects[project_index] %}
-                            {% include project_card.html project=project card_type="homepage" %}
-                        {% endif %}
-                    {% endfor %}
-
-                    <!-- Actual cards -->
-                    {% for project in featured_projects %}
-                        {% include project_card.html project=project card_type="homepage" %}
-                    {% endfor %}
-
-                    <!-- Duplicates for end (from start of list) -->
-                    {% assign cards_to_duplicate_minus_1 = cards_to_duplicate | minus: 1 %}
-                    {% for i in (0..cards_to_duplicate_minus_1) %}
-                        {% if i < num_projects %}
-                            {% assign project = featured_projects[i] %}
-                            {% include project_card.html project=project card_type="homepage" %}
-                        {% endif %}
-                    {% endfor %}
+                    {% for i in (1..cards_to_duplicate) %}{% assign project_index = num_projects | minus: cards_to_duplicate | plus: i | minus: 1 %}{% if project_index >= 0 and project_index < num_projects %}{% assign project = featured_projects[project_index] %}{% include project_card.html project=project card_type="homepage" %}{% endif %}{% endfor %}
+                    {% for project in featured_projects %}{% include project_card.html project=project card_type="homepage" %}{% endfor %}
+                    {% assign cards_to_duplicate_minus_1 = cards_to_duplicate | minus: 1 %}{% for i in (0..cards_to_duplicate_minus_1) %}{% if i < num_projects %}{% assign project = featured_projects[i] %}{% include project_card.html project=project card_type="homepage" %}{% endif %}{% endfor %}
                 {% else %}
                     <p class="text-center">No featured projects to display.</p>
                 {% endif %}
@@ -78,7 +55,7 @@ scripts:
             <button class="scroll-button next" aria-label="Next Projects" onclick="manualScroll(1)">▶</button>
         </div>
     </section>
-    {{ site.data.homepage_content.vimeo_player_api_script }} <!-- Vimeo Player API Script -->
+    {{ site.data.homepage_content.vimeo_player_api_script }}
 </main>
 
 <script>
@@ -86,35 +63,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const iframe = document.querySelector('#homepage-vimeo-player');
     if (iframe) {
         const player = new Vimeo.Player(iframe);
-
         player.ready().then(function() {
-            // The player is ready
-            console.log('Vimeo player is ready.');
             player.play().catch(function(error) {
-                switch (error.name) {
-                    case 'PasswordError':
-                        console.error('Vimeo: The video is password-protected.');
-                        break;
-                    case 'PrivacyError':
-                        console.error('Vimeo: The video is private.');
-                        break;
-                    default:
-                        console.error('Vimeo: An error occurred with autoplay - ', error.name, error.message);
-                        break;
-                }
+                console.error('Vimeo autoplay error:', error.name, error.message);
             });
-            // Loop is already set in the iframe src URL with &loop=1
-            // Autoplay is attempted here. Muting in src URL (&muted=1) helps.
         }).catch(function(error) {
             console.error('Vimeo player failed to initialize:', error);
         });
-
-        // Optional: You can listen for play events if needed
-        // player.on('play', function() {
-        //     console.log('Played the video!');
-        // });
-    } else {
-        console.log('Homepage Vimeo player iframe not found.');
     }
 });
 </script>

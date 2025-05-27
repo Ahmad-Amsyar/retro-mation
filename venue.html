@@ -30,14 +30,24 @@ scripts:
                         <p class="mb-1"><strong style="color: var(--retro-neon-cyan);">Location:</strong> Bestari Lecture Hall</p>
                         <p class="mb-1"><strong style="color: var(--retro-neon-cyan);">Level:</strong> 2</p>
                         <p class="mb-4"><strong style="color: var(--retro-neon-cyan);">Building:</strong> UniKL MIIT (Malaysian Institute of Information Technology)</p>
+
                         <p class="mb-4">
                             Join us physically to experience the amazing projects by our talented students!
                         </p>
+
                         <h3 class="text-xl mt-8 mb-4 venue-page-h3-style">Access Details:</h3>
                         <p class="mb-2">
-                            Use the map below for directions. Public transport and e-hailing services are readily available.
+                            Use the map below for directions.
                         </p>
                         <p class="mb-2">
+                            <strong>Nearby Public Transport:</strong>
+                            <br>- KJ12 Dang Wangi (LRT Kelana Jaya Line)
+                            <br>- MR9 Medan Tuanku (Monorail Line)
+                        </p>
+                        <p class="mb-2 mt-2">
+                            E-hailing services are also readily available to the venue.
+                        </p>
+                        <p class="mt-4 mb-2">
                             The <a href="{{ '/bigshowcase.html' | relative_url }}">Online Showcase</a> also features all the student projects.
                         </p>
                          <p class="mb-2">
@@ -60,49 +70,28 @@ scripts:
         <!-- Floor Map Content -->
         <div id="floor-map-content" class="venue-content-section text-center" style="display: none;">
             <h3 class="text-2xl md:text-3xl mb-6 uppercase venue-page-h3-style">Exhibition Layout & Booth List</h3>
-
-            <div class="floor-map-container"> <!-- Added a general container for all floor map layouts -->
-                <!-- Desktop Horizontal Layout -->
+            <div class="floor-map-container">
                 <div class="floor-map-desktop-container hidden md:flex md:flex-row md:justify-around md:items-start gap-4">
-                    <div class="floor-map-image-wrapper">
-                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main">
-                    </div>
-                    <div class="floor-map-image-wrapper">
-                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list">
-                    </div>
-                    <div class="floor-map-image-wrapper">
-                        <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list">
-                    </div>
+                    <div class="floor-map-image-wrapper"><img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main"></div>
+                    <div class="floor-map-image-wrapper"><img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list"></div>
+                    <div class="floor-map-image-wrapper"><img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list"></div>
                 </div>
-
-                <!-- Mobile Two-Column Layout -->
                 <div class="floor-map-mobile-container md:hidden flex flex-row gap-2">
-                    <div class="floor-map-mobile-left w-1/2">
-                        <div class="floor-map-image-wrapper">
-                             <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main-mobile">
-                        </div>
-                    </div>
+                    <div class="floor-map-mobile-left w-1/2"><div class="floor-map-image-wrapper"><img src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" alt="Main Floor Map Layout" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_1.png' | relative_url }}" class="floor-map-image floor-map-main-mobile"></div></div>
                     <div class="floor-map-mobile-right w-1/2 flex flex-col gap-2">
-                        <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper">
-                            <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list-mobile">
-                        </div>
-                        <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper">
-                            <img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list-mobile">
-                        </div>
+                        <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper"><img src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" alt="Student Booth List Part 1" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_2.png' | relative_url }}" class="floor-map-image floor-map-list-mobile"></div>
+                        <div class="floor-map-image-wrapper floor-map-list-mobile-wrapper"><img src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" alt="Student Booth List Part 2" data-src="{{ '/assets/images/floor/Map-Layout-Final_Page_3.png' | relative_url }}" class="floor-map-image floor-map-list-mobile"></div>
                     </div>
                 </div>
             </div>
-            
             <p class="mt-6 text-sm italic">Click on any map image to view larger. Refer to the main layout for booth locations.</p>
         </div>
     </section>
 </main>
 
 <div id="page-image-modal" class="modal-overlay">
-    <div class="modal-content">
-        <img id="enlarged-page-image" src="" alt="Enlarged Image">
-    </div>
-    <button id="prev-page-image" class="modal-nav-button prev">◀</button> <!-- Enabled -->
-    <button id="next-page-image" class="modal-nav-button next">▶</button> <!-- Enabled -->
+    <div class="modal-content"><img id="enlarged-page-image" src="" alt="Enlarged Image"></div>
+    <button id="prev-page-image" class="modal-nav-button prev">◀</button>
+    <button id="next-page-image" class="modal-nav-button next">▶</button>
     <button id="close-page-image-modal" class="modal-close-button">×</button>
 </div>

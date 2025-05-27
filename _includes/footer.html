@@ -1,12 +1,9 @@
 <footer class="text-center mt-12 md:mt-20 text-sm">
-    <p>© {{ site.time | date: '%Y' }} FYP Animation Students. All rights reserved.</p> <!-- Corrected: Used site.time -->
+    <p>© {% now '%Y' %} Retro-Mation FYP Animation Students. All rights reserved.</p>
     <p class="mt-2">
         <a href="{{ '/' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Home</a> |
-        <a href="/about" class="text-retro-neon-cyan hover:text-retro-neon-yellow">About</a> |
-        <a href="{{ '/showcase.html' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Showcase</a> |
+        <a href="{{ '/bigshowcase.html' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Showcase</a> |
         <a href="{{ '/time.html' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Schedule</a> |
-        <a href="{{ '/venue.html' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Venue</a> |
-        <a href="/contact" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Contact</a> |
-        <a href="/acknowledgements" class="text-retro-neon-pink hover:text-retro-neon-yellow">Acknowledgements</a>
+        <a href="{{ '/venue.html' | relative_url }}" class="text-retro-neon-cyan hover:text-retro-neon-yellow">Venue</a>
     </p>
 </footer>
