@@ -6,6 +6,7 @@ project_title: "GINGER"
 
 # For homepage highlights and bigshowcase cards
 short_description: "Amir, a cheerful and caring young boy, is devastated when his beloved orange cat, Ginger, suddenly goes missing." # Card image
+image_url: "/assets/images/projects/23-nooriffah-irdina/dp.jpg"
 category: "animation" # For bigshowcase card border and filtering
 featured: true # Set to true to show on homepage highlights
 
