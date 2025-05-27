@@ -12,7 +12,6 @@ layout: default
     <div class="lg:col-span-1">
         <section class="showcase-section">
             {% if page.student_photo_url %}
-            <!-- Changed max-w-xs to responsive max-width -->
             <img src="{{ page.student_photo_url | relative_url }}" alt="Photo of {{ page.student_name }}" class="w-full max-w-xs md:max-w-sm lg:max-w-md mx-auto mb-6 border-4 border-retro-neon-cyan rounded-full shadow-lg shadow-retro-neon-cyan/30">
             {% endif %}
 
@@ -78,8 +77,8 @@ layout: default
 
             {% if page.directors_statement %}
             <h4 class="mb-2">Director's Statement:</h4>
-            <div class="mb-6 italic showcase-section-paragraph director-statement-text"> <!-- Added class for specific styling -->
-                <span class="quote-mark">"</span>{{ page.directors_statement | markdownify | remove_first: '<p>' | remove_last: '</p>' | strip_html | strip_newlines }}<span class="quote-mark">"</span> - {{ page.student_name }}
+            <div class="mb-6 italic showcase-section-paragraph director-statement-text">
+                <span class="quote-mark">"</span>{{ page.directors_statement | markdownify | remove_first: '<p>' | remove_last: '</p>' | strip_html | strip_newlines }}<span class="quote-mark">"</span> - {{ page.student_name | upcase }} <!-- Changed to upcase -->
             </div>
             {% endif %}
 
