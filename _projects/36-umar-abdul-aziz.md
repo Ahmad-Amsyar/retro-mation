@@ -17,7 +17,7 @@ introduction: |
 skills:
   - "Blender"
   - "Adobe Premiere Pro"
-  - "Pro, Adobe Photoshop"
+  - "Adobe Photoshop"
   - "Autodesk Maya"
 online_links:
   - name: "Instagram"
