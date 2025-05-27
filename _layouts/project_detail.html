@@ -21,7 +21,7 @@ layout: default
             </div>
 
             {% if page.skills %}
-            <h4 class="mb-2">Skills / Software:</h4>
+            <h4 class="mb-2">Software:</h4> <!-- Changed "Skills / Software" to "Software" -->
             <ul class="list-disc list-inside mb-4">
                 {% for skill in page.skills %}
                 <li>{{ skill }}</li>
@@ -31,7 +31,7 @@ layout: default
 
             {% if page.online_links %}
             <h4 class="mb-2">Find Me Online:</h4>
-            <div class="showcase-section-paragraph"> <!-- Changed <p> to <div> for multiple <br> -->
+            <div class="showcase-section-paragraph"> <!-- This class should ensure consistent font size -->
                 {% for link_item in page.online_links %}
                     <strong>{{ link_item.name }}:</strong>
                     {% assign link_url = link_item.url %}
@@ -42,7 +42,7 @@ layout: default
                     {% elsif link_url contains "http://" or link_url contains "https://" %}
                         <a href="{{ link_url }}" target="_blank" class="hover:text-retro-accent">{{ link_url }}</a>
                     {% else %}
-                        {{ link_url }} <!-- Display as text if not a clear URL/email -->
+                        {{ link_url }}
                     {% endif %}
                     <br>
                 {% endfor %}
@@ -94,14 +94,16 @@ layout: default
     </div>
 </main>
 
-<!-- Modal for image gallery (copied from showcase.html) -->
+<!-- Modal for image gallery -->
 <div id="image-modal" class="modal-overlay">
     <div class="modal-content">
+        <!-- The image itself -->
         <img id="enlarged-image" src="" alt="Enlarged Project Image">
-        <button id="prev-image" class="modal-nav-button prev">◀</button>
-        <button id="next-image" class="modal-nav-button next">▶</button>
-        <button id="close-modal" class="modal-close-button">×</button>
     </div>
+    <!-- Navigation buttons moved outside .modal-content for easier positioning relative to viewport/overlay -->
+    <button id="prev-image" class="modal-nav-button prev">◀</button>
+    <button id="next-image" class="modal-nav-button next">▶</button>
+    <button id="close-modal" class="modal-close-button">×</button>
 </div>
 
 <script>
@@ -155,6 +157,7 @@ if (galleryContainer) {
 if (closeModalButton) closeModalButton.addEventListener('click', closeModal);
 if (imageModal) {
     imageModal.addEventListener('click', (event) => {
+        // Close if clicking on the overlay, but not on the image or nav/close buttons themselves
         if (event.target === imageModal) {
             closeModal();
         }
