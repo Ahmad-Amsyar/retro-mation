@@ -1,8 +1,5 @@
 /* assets/css/style.css */
 
-/* ... (all previous CSS from :root up to .image-gallery img:hover) ... */
-/* Keep all the CSS from the previous version up to this point, I'll just show the modal part and below */
-
 /* Define retro color palette using CSS variables (New Colour Theme) */
 :root {
     --retro-bg: #F9EECE; /* Light Yellow/White - Background */
@@ -52,11 +49,12 @@ h2 { color: var(--retro-neon-pink); text-shadow: 2px 2px var(--retro-neon-yellow
 }
 .showcase-section > h3 { margin-bottom: 1.5rem; } /* Specific for "Project Title" heading */
 
-.venue-page h3 { /* For H3s specifically on the venue page */
+.venue-page h3, /* For H3s specifically on the venue page (e.g. section titles) */
+.venue-page-h3-style { /* For specific h3s like "Access Details", "Map Location" */
     color: var(--retro-neon-pink);
     text-shadow: 2px 2px var(--retro-neon-yellow);
-    font-size: 1.5rem;
-    font-family: var(--font-pixel);
+    font-size: 1.5rem; /* To match H2 on venue page if needed, or adjust */
+    font-family: var(--font-pixel); /* Ensure pixel font for these H3s */
 }
 h4 { /* For subheadings like Introduction, Software, Synopsis etc. */
     color: var(--retro-neon-cyan);
@@ -79,7 +77,7 @@ a:hover {
 
 /* --- PARAGRAPH STYLING & SHOWCASE SECTION SPECIFICS --- */
 .showcase-section p,
-.venue-page .info-section p,
+.venue-page .info-section p, /* Paragraphs in venue page "How to get here" */
 .schedule-table td, 
 .event-info-section p,
 .showcase-section-paragraph, 
@@ -287,15 +285,10 @@ a:hover {
     font-size: 2.5em;
     font-weight: bold;
     color: var(--retro-text);
-    line-height: 0.5; /* Adjusted to prevent excessive line height due to large font */
-    vertical-align: middle; /* Helps, but exact alignment can be tricky with line height */
-    margin: 0 0.1em; /* Small horizontal space */
+    line-height: 0.5; 
+    vertical-align: middle; 
+    margin: 0 0.1em; 
 }
-/* Specific adjustment for the opening quote if needed */
-/* .director-statement-text > .quote-mark:first-child {} */
-/* Specific adjustment for the closing quote if needed */
-/* .director-statement-text > .quote-mark:last-of-type {} */
-
 
 .video-placeholder {
     background-color: #000; border: 3px solid var(--retro-neon-pink);
@@ -335,28 +328,27 @@ a:hover {
     display: flex; align-items: center; justify-content: center;
     z-index: 1000; visibility: hidden; opacity: 0;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
-    padding: 20px; /* Overall padding for the overlay */
+    padding: 20px; 
     box-sizing: border-box;
 }
 .modal-overlay.visible {
     visibility: visible; opacity: 1;
     transition: opacity 0.3s ease, visibility 0s 0s;
 }
-.modal-content { /* This div wraps the image */
+.modal-content { 
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;  /* Takes full width of padded .modal-overlay */
-    height: 100%; /* Takes full height of padded .modal-overlay */
-    /* max-width and max-height are effectively controlled by the parent's padding */
+    width: 100%;  
+    height: 100%; 
 }
 .modal-content img {
     display: block;
-    max-width: 100%;  /* Image will not exceed the .modal-content area */
-    max-height: 100%; /* Image will not exceed the .modal-content area */
-    width: auto;   /* Maintain aspect ratio */
-    height: auto;  /* Maintain aspect ratio */
+    max-width: 100%;  
+    max-height: 100%; 
+    width: auto;   
+    height: auto;  
     object-fit: contain;
     border: 4px solid var(--retro-neon-yellow);
     box-sizing: border-box;
@@ -380,7 +372,6 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.8); color: var(--retro-neon-yellow);
     box-shadow: 3px 3px 0 var(--retro-neon-cyan); border-color: var(--retro-neon-yellow);
 }
-/* Position nav buttons further from edges to be outside the .modal-overlay padding */
 .modal-nav-button.prev { left: max(20px, env(safe-area-inset-left, 20px) + 5px); }
 .modal-nav-button.next { right: max(20px, env(safe-area-inset-right, 20px) + 5px); }
 
@@ -398,7 +389,6 @@ a:hover {
 
 @media (max-width: 768px) {
     .modal-overlay { padding: 10px; }
-    /* .modal-content will adjust due to parent padding */
     .modal-nav-button.prev { left: 5px; }
     .modal-nav-button.next { right: 5px; }
     .modal-close-button { top: 5px; right: 5px; width:30px; height:30px; font-size:1.5rem; }
@@ -441,7 +431,77 @@ a:hover {
 .schedule-table-container { display: none; }
 .schedule-table-container.active { display: block; }
 
-/* --- VENUE PAGE --- */
+/* --- VENUE PAGE - Tabs and Content --- */
+.venue-content-buttons {
+    /* text-align: center; is already applied by Tailwind class in HTML */
+    /* margin-bottom: 1.5rem; is already applied by Tailwind class in HTML */
+}
+
+.venue-tab-button {
+    font-family: var(--font-pixel);
+    background-color: var(--retro-neon-cyan); 
+    color: var(--retro-bg); 
+    padding: 10px 20px;
+    border: 2px solid var(--retro-text); 
+    box-shadow: 3px 3px 0 var(--retro-text); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+}
+.venue-tab-button:hover {
+    background-color: var(--retro-neon-yellow); 
+    color: var(--retro-text); 
+    box-shadow: 3px 3px 0 var(--retro-accent); 
+    border-color: var(--retro-accent);
+    transform: translate(-1px, -1px);
+}
+.venue-tab-button:active {
+     transform: translate(1px, 1px);
+     box-shadow: 1px 1px 0 var(--retro-text);
+}
+.venue-tab-button.active { 
+    background-color: var(--retro-accent); 
+    color: var(--retro-bg); 
+    box-shadow: 3px 3px 0 var(--retro-neon-yellow); 
+    border-color: var(--retro-neon-yellow);
+}
+
+.venue-content-section {
+    display: none; 
+}
+.venue-content-section.active {
+    display: block; 
+}
+
+.venue-page #venue-details.info-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; 
+}
+.venue-page #venue-details.info-section .venue-content-section.active {
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; 
+}
+.venue-page #venue-details.info-section #how-to-get-here-content.active {
+    display: block; 
+}
+
+#floor-map-content img.floor-map-image {
+    max-width: 100%; 
+    height: auto;    
+    max-height: 80vh; 
+    object-fit: contain; 
+    display: block; 
+}
+
+
+/* --- VENUE PAGE (Map Container) --- */
 .map-container {
     position: relative; overflow: hidden; padding-top: 56.25%;
     border: 3px solid var(--retro-neon-pink); border-radius: 8px;
@@ -451,12 +511,13 @@ a:hover {
 @media (min-width: 768px) {
     .venue-page .map-container { padding-top: 0; height: 100%; }
     .venue-page .info-section .flex-col.md\:flex-row { flex-grow: 1; }
-    .venue-page .info-section .flex-col.md\:flex-row > div { display: flex; flex-direction: column; }
-    .venue-page .info-section .flex-col.md\:flex-row > div:first-child { flex-grow: 0; }
-    .venue-page .info-section .flex-col.md\:flex-row > div:last-child {
+    /* Tailwind classes handle the md:flex-row, so this might be redundant if structure is simple */
+    /* .venue-page .info-section .flex-col.md\:flex-row > div { display: flex; flex-direction: column; } */
+    /* .venue-page .info-section .flex-col.md\:flex-row > div:first-child { flex-grow: 0; } */
+    /* .venue-page .info-section .flex-col.md\:flex-row > div:last-child {
         flex-grow: 1; display: flex; flex-direction: column;
-    }
-    .venue-page .info-section .flex-col.md\:flex-row > div:last-child h3 { flex-shrink: 0; margin-top: 0; }
+    } */
+    /* .venue-page .info-section .flex-col.md\:flex-row > div:last-child h3 { flex-shrink: 0; margin-top: 0; } */
 }
 
 /* --- BIGSHOWCASE PAGE --- */
