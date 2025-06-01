@@ -7,19 +7,19 @@
 {% assign p = include.project %}
 {% assign card_type = include.card_type | default: "gallery" %}
 
-{%- comment -%}Determine border color based on category for visual variety {%- endcomment -%}
-{%- if p.category == 'animation' -%}
-  {%- assign border_color_var = '--retro-accent' -%}          {% comment %} Red {% endcomment %}
-{%- elsif p.category == 'film' -%}
-  {%- assign border_color_var = '--retro-neon-cyan' -%}      {% comment %} Blue {% endcomment %}
-{%- elsif p.category == 'game' -%}
-  {%- assign border_color_var = '--retro-neon-yellow' -%}    {% comment %} Yellow {% endcomment %}
-{%- else -%}
-  {%- assign border_color_var = '--retro-neon-cyan' -%}      {% comment %} Default Blue {% endcomment %}
-{%- endif -%}
+{% comment %} Determine border color based on category for visual variety {% endcomment %}
+{% if p.category == 'animation' %}
+  {% assign border_color_var = '--retro-accent' %}          {% comment %} Red {% endcomment %}
+{% elsif p.category == 'film' %}
+  {% assign border_color_var = '--retro-neon-cyan' %}      {% comment %} Blue {% endcomment %}
+{% elsif p.category == 'game' %}
+  {% assign border_color_var = '--retro-neon-yellow' %}    {% comment %} Yellow {% endcomment %}
+{% else %}
+  {% assign border_color_var = '--retro-neon-cyan' %}      {% comment %} Default Blue {% endcomment %}
+{% endif %}
 
-{%- comment -%} Helper function-like assignments for title casing with leading symbols {%- endcomment -%}
-{%- assign R_NON_ALPHA_PREFIX = /^\W+/ -%}
+{% comment %} Regular expression to match one or more non-alphanumeric characters at the beginning of a string {% endcomment %}
+{% assign R_NON_ALPHA_PREFIX = /^\W+/ %}
 
 <div class="project-card text-center rounded-lg" style="border-color: var({{ border_color_var }});">
     <img src="{{ p.image_url | relative_url }}" alt="{{ p.project_title }} Preview"
@@ -28,19 +28,19 @@
     <div class="card-content">
         <div>
             <h3 class="mb-0.5">
-                {%- assign student_name_words = p.student_name | split: " " -%}
-                {%- for word in student_name_words -%}
-                    {%- assign prefix = word | match: R_NON_ALPHA_PREFIX -%}
-                    {%- assign rest_of_word = word | remove_first: prefix -%}
-                    {{ prefix }}{{ rest_of_word | capitalize }}{% unless forloop.last %} {% endunless %}
-                {%- endfor -%}
+                {% assign student_name_words = p.student_name | split: " " %}
+                {% for word in student_name_words %}
+                    {% assign prefix = word | match: R_NON_ALPHA_PREFIX %}
+                    {% assign rest_of_word = word | remove_first: prefix %}
+                    {{ prefix }}{{ rest_of_word | capitalize }}{% unless forloop.last %} {{ " " }}{% endunless %}
+                {% endfor %}
                 -
-                {%- assign project_title_words = p.project_title | split: " " -%}
-                {%- for word in project_title_words -%}
-                    {%- assign prefix = word | match: R_NON_ALPHA_PREFIX -%}
-                    {%- assign rest_of_word = word | remove_first: prefix -%}
-                    {{ prefix }}{{ rest_of_word | capitalize }}{% unless forloop.last %} {% endunless %}
-                {%- endfor -%}
+                {% assign project_title_words = p.project_title | split: " " %}
+                {% for word in project_title_words %}
+                    {% assign prefix = word | match: R_NON_ALPHA_PREFIX %}
+                    {% assign rest_of_word = word | remove_first: prefix %}
+                    {{ prefix }}{{ rest_of_word | capitalize }}{% unless forloop.last %} {{ " " }}{% endunless %}
+                {% endfor %}
             </h3>
             <p class="text-sm mb-4 {% if card_type == 'homepage' %}project-card-description-homepage{% else %}project-card-description-gallery{% endif %}">{{ p.short_description | truncatewords: 15 }}</p>
         </div>
