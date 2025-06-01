@@ -1,10 +1,27 @@
 // assets/js/bigshowcase_search.js
 
-// Helper function to convert a string to Title Case
+// Helper function to convert a string to Title Case, handling leading symbols
 function toTitleCase(str) {
     if (!str) return '';
     return str.toLowerCase().split(' ').map(function(word) {
-        return word.charAt(0).toUpperCase() + word.slice(1);
+        if (word.length === 0) return '';
+        
+        let firstCharIndex = 0;
+        // Find the first alphabetic character
+        for (let i = 0; i < word.length; i++) {
+            if (word[i].match(/[a-z]/i)) { // Check if it's a letter (case-insensitive)
+                firstCharIndex = i;
+                break;
+            }
+             // If no letter found, it means the word is all symbols, return as is (after toLowerCase)
+            if (i === word.length -1) return word;
+        }
+        
+        const prefix = word.substring(0, firstCharIndex);
+        const charToCap = word.charAt(firstCharIndex);
+        const restOfWord = word.substring(firstCharIndex + 1);
+        
+        return prefix + charToCap.toUpperCase() + restOfWord;
     }).join(' ');
 }
 
