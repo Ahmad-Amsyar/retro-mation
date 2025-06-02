@@ -29,18 +29,26 @@
         <div>
             <h3 class="mb-0.5">
                 {% assign student_name_words = p.student_name | split: " " %}
+                {% assign processed_student_name_array = "" | split: "|" %}
                 {% for word in student_name_words %}
                     {% assign prefix = word | match: R_NON_ALPHA_PREFIX %}
-                    {% assign rest_of_word = word | remove_first: prefix %}
-                    {{ prefix }}{{ rest_of_word | capitalize }}{% unless forloop.last %} {{ " " }}{% endunless %}
+                    {% assign actual_word_part = word | remove_first: prefix %}
+                    {% assign capitalized_word_part = actual_word_part | capitalize %}
+                    {% assign final_processed_word = prefix | append: capitalized_word_part %}
+                    {% assign processed_student_name_array = processed_student_name_array | push: final_processed_word %}
                 {% endfor %}
+                {{ processed_student_name_array | join: " " }}
                 -
                 {% assign project_title_words = p.project_title | split: " " %}
+                {% assign processed_project_title_array = "" | split: "|" %}
                 {% for word in project_title_words %}
                     {% assign prefix = word | match: R_NON_ALPHA_PREFIX %}
-                    {% assign rest_of_word = word | remove_first: prefix %}
-                    {{ prefix }}{{ rest_of_word | capitalize }}{% unless forloop.last %} {{ " " }}{% endunless %}
+                    {% assign actual_word_part = word | remove_first: prefix %}
+                    {% assign capitalized_word_part = actual_word_part | capitalize %}
+                    {% assign final_processed_word = prefix | append: capitalized_word_part %}
+                    {% assign processed_project_title_array = processed_project_title_array | push: final_processed_word %}
                 {% endfor %}
+                {{ processed_project_title_array | join: " " }}
             </h3>
             <p class="text-sm mb-4 {% if card_type == 'homepage' %}project-card-description-homepage{% else %}project-card-description-gallery{% endif %}">{{ p.short_description | truncatewords: 15 }}</p>
         </div>
