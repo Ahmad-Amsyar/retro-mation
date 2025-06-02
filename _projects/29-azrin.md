@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "A Purrfect Match" # Used for browser tab title
-student_name: "Nur Azrin binti Md Rizal Haffid"
+student_name: "Nur Azrin Binti Md Rizal Haffid"
 project_title: "A Purrfect Match"
 
 # For homepage highlights and bigshowcase cards

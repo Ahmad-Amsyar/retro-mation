@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Broken Seal" # Used for browser tab title
-student_name: "MUHAMMAD HAZIQ IKMAL BIN MOHD NOOR"
+student_name: "Muhammad Haziq Ikmal Bin Mohd Noor"
 project_title: "Broken Seal"
 
 # For homepage highlights and bigshowcase cards

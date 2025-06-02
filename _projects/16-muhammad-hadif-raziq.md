@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Whispers in the Dark" # Used for browser tab title
-student_name: "MUHAMMAD HADIF RAZIQ BIN ABDUL HADI"
+student_name: "Muhammad Hadif Raziq Bin Abdul Hadi"
 project_title: "Whispers in the Dark"
 
 # For homepage highlights and bigshowcase cards

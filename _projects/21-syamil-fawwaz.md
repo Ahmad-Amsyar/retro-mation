@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Disquietude" # Used for browser tab title
-student_name: "Muhammad Syamil Fawwaz bin Che Samsurikhan"
+student_name: "Muhammad Syamil Fawwaz Bin Che Samsurikhan"
 project_title: "Disquietude"
 
 # For homepage highlights and bigshowcase cards

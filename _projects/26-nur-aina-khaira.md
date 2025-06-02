@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "The Final" # Used for browser tab title
-student_name: "NUR AINA KHAIRA BINTI MOHD KHAIRI"
+student_name: "Nur Aina Khaira Binti Mohd Khairi"
 project_title: "The Final"
 
 # For homepage highlights and bigshowcase cards

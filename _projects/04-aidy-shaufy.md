@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Royal Rivalry" # Used for browser tab title
-student_name: "AIDY SHAUFY BIN HAROLD ANUAR"
+student_name: "Aidy Shaufy Bin Harold Anuar"
 project_title: "Royal Rivalry"
 
 # For homepage highlights and bigshowcase cards

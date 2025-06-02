@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Beyond the Spell" # Used for browser tab title
-student_name: "Muhammad Afif bin Mohd Jais"
+student_name: "Muhammad Afif Bin Mohd Jais"
 project_title: "Beyond the Spell"
 
 # For homepage highlights and bigshowcase cards

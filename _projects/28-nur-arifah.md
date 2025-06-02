@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Travelling Oscar" # Used for browser tab title
-student_name: "Nur Arifah binti Mohd Rosli"
+student_name: "Nur Arifah Binti Mohd Rosli"
 project_title: "Travelling Oscar"
 
 # For homepage highlights and bigshowcase cards

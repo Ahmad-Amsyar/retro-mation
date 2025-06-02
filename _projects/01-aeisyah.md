@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Something’s Fishy" # Used for browser tab title
-student_name: "‘Aeisyah binti Mohd Asri"
+student_name: "‘Aeisyah Binti Mohd Asri"
 project_title: "Something’s Fishy"
 
 # For homepage highlights and bigshowcase cards

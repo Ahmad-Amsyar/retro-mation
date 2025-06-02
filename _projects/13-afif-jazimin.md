@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Remnant" # Used for browser tab title
-student_name: "MUHAMMAD AFIF JAZIMIN BIN RAHIM"
+student_name: "Muhammad Afif Jazimin Bin Rahim"
 project_title: "Remnant"
 
 # For homepage highlights and bigshowcase cards

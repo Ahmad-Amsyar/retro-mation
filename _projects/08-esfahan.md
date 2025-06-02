@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Tukang Tarik" # Used for browser tab title
-student_name: "Esfahan bin Rostam Zulkhairi"
+student_name: "Esfahan Bin Rostam Zulkhairi"
 project_title: "Tukang Tarik"
 
 # For homepage highlights and bigshowcase cards

@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "GINGER" # Used for browser tab title
-student_name: "NOORIFFAH IRDINA BINTI JUMA'AT"
+student_name: "Nooriffah Irdina Binti Juma'at"
 project_title: "GINGER"
 
 # For homepage highlights and bigshowcase cards

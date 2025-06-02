@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Consumed by Hunger" # Used for browser tab title
-student_name: "Fatin Nur Amyla Bt Wan Hussin"
+student_name: "Fatin Nur Amyla Binti Wan Hussin"
 project_title: "Consumed by Hunger"
 
 # For homepage highlights and bigshowcase cards

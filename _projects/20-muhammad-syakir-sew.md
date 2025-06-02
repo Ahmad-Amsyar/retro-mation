@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "The Snow Giant" # Used for browser tab title
-student_name: "Muhammad Syakir Sew bin Muhamad Rodhi Sew"
+student_name: "Muhammad Syakir Sew Bin Muhamad Rodhi Sew"
 project_title: "The Snow Giant"
 
 # For homepage highlights and bigshowcase cards

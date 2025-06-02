@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "KINARA: THE RIMBAUAN MAIDEN" # Used for browser tab title
-student_name: "Dayang Nur Izzah Batrisyia binti Awang Abdul Sahar"
+student_name: "Dayang Nur Izzah Batrisyia Binti Awang Abdul Sahar"
 project_title: "KINARA: THE RIMBAUAN MAIDEN"
 
 # For homepage highlights and bigshowcase cards

@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Techno Peril" # Used for browser tab title
-student_name: "KHAIRUL IZZATI ZAHIRA BINTI KHAIRUL ANUAR"
+student_name: "Khairul Izzati Zahira Binti Khairul Anuar"
 project_title: "Techno Peril"
 
 # For homepage highlights and bigshowcase cards

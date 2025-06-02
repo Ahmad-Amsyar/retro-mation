@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Tiny Legend" # Used for browser tab title
-student_name: "Muhammad Idham bin Zulkurnain"
+student_name: "Muhammad Idham Bin Zulkurnain"
 project_title: "Tiny Legend"
 
 # For homepage highlights and bigshowcase cards

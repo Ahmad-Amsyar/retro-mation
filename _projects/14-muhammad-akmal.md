@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Breaking The Fairy Tale" # Used for browser tab title
-student_name: "Muhammad Akmal bin Hamdan"
+student_name: "Muhammad Akmal Bin Hamdan"
 project_title: "Breaking The Fairy Tale"
 
 # For homepage highlights and bigshowcase cards

@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Apple Pie Surprise" # Used for browser tab title
-student_name: "NIK SOFFEA HAZIRAH BINTI NIK AHMAD AFENDY"
+student_name: "Nik Soffea Hazirah Binti Nik Ahmad Afendy"
 project_title: "Apple Pie Surprise"
 
 # For homepage highlights and bigshowcase cards

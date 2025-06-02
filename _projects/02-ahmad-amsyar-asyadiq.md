@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Robot Wau" # Used for browser tab title
-student_name: "Ahmad Amsyar Asyadiq bin Syaiful Bahri"
+student_name: "Ahmad Amsyar Asyadiq Bin Syaiful Bahri"
 project_title: "Robot Wau"
 
 # For homepage highlights and bigshowcase cards

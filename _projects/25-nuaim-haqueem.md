@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "My Ghost Tale" # Used for browser tab title
-student_name: "Nuaim Haqueem bin Mushahar"
+student_name: "Nuaim Haqueem Bin Mushahar"
 project_title: "My Ghost Tale"
 
 # For homepage highlights and bigshowcase cards

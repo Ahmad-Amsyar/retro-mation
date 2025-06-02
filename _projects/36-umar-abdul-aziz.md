@@ -1,7 +1,7 @@
 ---
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Chaos Of Routine" # Used for browser tab title
-student_name: "UMAR ABDUL AZIZ BIN AZMAN"
+student_name: "Umar Abdul Aziz Bin Azman"
 project_title: "Chaos Of Routine"
 
 # For homepage highlights and bigshowcase cards
