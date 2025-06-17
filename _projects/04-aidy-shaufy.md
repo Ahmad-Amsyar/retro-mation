@@ -22,7 +22,7 @@ skills:
 online_links:
   - name: "E-mail"
     url: "aidyshaufy89@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/aIh_SrRHt9I"
 synopsis: |
   In the ancient Kingdom of Zhongchu, two royal brothers which are Zayn and Shein, are forced to battle for the throne after the death of their father. Bound by tradition and driven by opposing ideals, their bond is tested as rivalry turns into a dramatic struggle. With the fate of the kingdom at stake, their final battle will decide not only the next ruler but the legacy they leave behind.
 

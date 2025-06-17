@@ -24,7 +24,7 @@ online_links:
     url: "@dizzy.co8"
   - name: "Behance"
     url: "Izzah Batrisyia"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/Y0W1OWhl_6o"
 synopsis: |
   Kinara, Goddess  of the Rimbauan Forest spending her time leisurely with the nature which she considers her child and home. Suddenly a dark and mechanical entity attack her forest and its lifes. Thus, forcing the goddess to unleash her spiritual power.
 details:

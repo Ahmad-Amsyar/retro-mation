@@ -25,7 +25,7 @@ online_links:
     url: "@Karesan0017"
   - name: "E-mail"
     url: "MuhammadIdham1662000@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: ""
 synopsis: |
   The Chaos of Routine follows a day in the life of Alex, a young professional burdened by the demands of caregiving and the pressures of a fast-paced career. Set in a cramped, cluttered apartment, the film captures the frantic rhythm of his morning as he scrambles to meet work obligations while caring for his aging father. Alex navigates the delicate balance between responsibility and personal sacrifice. As the chaos unfolds, quiet moments reveal the weight of grief, memory, and unspoken emotion lingering in the household. Through subtle visual cues and emotional tension, the film explores the strain of routine and the quiet resilience of those who endure it.
 

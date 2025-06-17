@@ -22,7 +22,7 @@ skills:
 online_links:
   - name: "Instagram"
     url: "@kik0popo"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/xXI_6iY93VA"
 synopsis: |
   Suki, a young girl... a deceased young girl is experiencing spirit phase where she can reminiscing her memories before going to heaven.Juno, a brown kitten, notices her and starts following her around the house.
 details:

@@ -22,7 +22,7 @@ skills:
 online_links:
   - name: "Youtube"
     url: "@m.ziqmall"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/o_TYkiQpGAk"
 synopsis: |
   The Broken Seal about Lynna, a young girl who finds an old doll and accidentally breaks a strange talisman in her attic. That night, the doll comes to life, revealing itself as a vengeful spirit. It haunts Lynna, feeding on her grief and fears.
   

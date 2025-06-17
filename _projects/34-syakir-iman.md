@@ -26,7 +26,7 @@ online_links:
     url: "Syakirdk@gmail.com"
   - name: "Tiktok"
     url: "@Syakir_dk"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/FOGb6TY12hQ"
 synopsis: |
   Jake, an honest small-town mechanic, discovers a bag of white powder in a mysterious car dropped at his garage. Moments later, the police surround him. Panicked, Jake flees in the vehicle, leading to a high-speed chase. It ends in a violent crash, leaving Jake to face the devastating cost of one desperate decision.
 

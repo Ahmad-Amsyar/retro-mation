@@ -24,7 +24,7 @@ online_links:
     url: "@arfh.lee"
   - name: "E-mail"
     url: "nurarifah.roslee@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/sY4FZSo70Wo"
 synopsis: |
   "Travelling Otter" follows Oscar, a mischievous little otter who unknowingly wanders through an unusual hole and becomes lost in Penang city streets. Bewildered by the chaos of the city, he becomes entangled with Duffy, a streetwise duck, who leads him through the new world. Through Oscar's hilarious blunders and growing homesickness, he learns lessons about resilience, friendship, and self-discovery.". With Duffy's assistance, he is eventually able to return home, looking at his peaceful forest with new maturity and appreciation.
 details:

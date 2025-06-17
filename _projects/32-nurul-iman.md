@@ -2,7 +2,7 @@
 # This front matter uses the keys defined in _layouts/project_detail.html
 title: "Living in the Moment" # Used for browser tab title
 student_name: "Nurul Iman Binti Abu Bakar"
-project_title: "Living in the Moment"
+project_title: "Raylight"
 
 # For homepage highlights and bigshowcase cards
 short_description: "In a distant world beyond ours, a star-born child named Himmel falls from the sky and awakens in a forgotten corner of Earth."
@@ -26,7 +26,7 @@ online_links:
     url: "@yumiinarts"
   - name: "E-mail"
     url: "nurulliman17@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/zjRENXpMraU"
 synopsis: |
   In a distant world beyond ours, a star-born child named Himmel falls from the sky and awakens in a forgotten corner of Earth. With a heart bound to nature, Himmel becomes a kindred spirit to the forest’s creatures—until the calm is shattered. An ancient manta, Caelara, a celestial being from the same skies, crashes into a man-made structure, unleashing a haunting cry that echoes through the trees. Sensing a deep unrest, Himmel embarks on a journey to find the source of the voice. But will the light arrive in time—before the last star fades?
 

@@ -26,7 +26,7 @@ online_links:
     url: "aradmille@gmail.com"
   - name: "Instagram"
     url: "@heyradmille"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/6qU1OxDeUoM"
 synopsis: |
   Dahlia is a college student majoring in photography, but she has an obscure hobby: capturing images of dead animals and insects. Due to this morally dubious obsession, she becomes haunted by a black, formless entity that terrorizes her waking life and invades her nightmares. This entity is the manifestation of her growing guilt. As the haunting intensifies, Dahlia is forced to confront her “guilty pleasure” and the psychological horror it invites.
 details:

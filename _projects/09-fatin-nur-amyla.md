@@ -26,7 +26,7 @@ online_links:
     url: "hwanggilion@gmail.com"
   - name: "X"
     url: "@hwanggilion"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/5CV-Sl-Agco"
 synopsis: |
   While exploring the wilderness, Ethan stumbles upon a hidden passage that leads him to a breathtaking underground magical lake. Weary, hungry, and parched, he reaches down to drink from its shimmering waters only to be interrupted by Nia, a mysterious and enchanting creature who dwells within the lake. What begins as a search for survival soon becomes a journey of trust, magic, and destiny.
 details:

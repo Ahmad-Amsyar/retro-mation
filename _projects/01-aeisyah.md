@@ -26,7 +26,7 @@ online_links:
     url: "@mii._ry"
   - name: "Behance"
     url: "aeisyah mohd"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/rdV90yGEBSs"
 synopsis: |
   Maya goes to the seaside to find peace after a hard day. As she watches the stars and listens to the waves, she notices someone standing partly in the water. Maya calls out the woman but she keeps going deeper. Without hesitation, Maya reaches out to grab her but Maya got dragged into the water instead. Too late, she realizes that the woman is bait for a giant fish. Maya struggles, but her panic makes it hard to think or breathe, and as her memories flash by, her strength fades. In the end, the giant sea creature swallows her whole.
 

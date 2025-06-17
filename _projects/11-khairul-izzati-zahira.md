@@ -26,7 +26,7 @@ online_links:
     url: "@cookiz_design"
   - name: "E-mail"
     url: "hairul.izzati1317@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/W30xTEl1gOU"
 synopsis: |
   Techno Peril is a story revolving a girl named Katie, who loves to wear her headphone all day long.
 details:

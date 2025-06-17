@@ -24,7 +24,7 @@ online_links:
     url: "@Liffyss"
   - name: "Youtube"
     url: "@eunjibias6278"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/3KbfWoAgKfI"
 synopsis: |
   A young artist, struggling with creative burnout, is pulled into her unfinished painting, entering a colourless world that mirrors her doubts. She meets The Midnight Painter, who add vibrant colours to the scene. Inspired, she joins in, rediscovering her confidence and creatice spark. When she returns to her studio, the previously unfinished canvas is now completed, vibrant masterpiece, symbolizing her transformation.
 

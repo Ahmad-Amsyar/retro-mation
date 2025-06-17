@@ -28,7 +28,7 @@ online_links:
     url: "(https://www.youtube.com/@Kiv1519"
   - name: "Behance"
     url: "(https://www.behance.net/afifjais"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/qZaD7vei8uc"
 synopsis: |
   A young mage is resolved to show off her might by striking her master, a renowned magician with the ability to summon strong defensive barriers at will, once. She wants to pass his difficult training test, but she finds it difficult to get past his supposedly invincible barriers in time.
 details:

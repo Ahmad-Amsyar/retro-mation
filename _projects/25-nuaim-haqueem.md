@@ -24,7 +24,7 @@ online_links:
     url: "@nuaimhaqueem"
   - name: "E-mail"
     url: "haqueem11@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/d353jtt6FM8"
 synopsis: |
   High school student Adam encounters a ghost named Emma in his apartment one morning. Initially freaked out by her presence, Adam soon outgrew his discomfort and developed a sort of contentment in Emma's company as she accompanies him throughout his day, Adam realizes that their unlikely friendship has brought unexpected joy into his life, teaching him to appreciate the beauty in the bizarre.
 details:

@@ -23,7 +23,7 @@ online_links:
     url: "@sy_amiys"
   - name: "E-mail"
     url: "hasyimahhasan41@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/PySi7ekQHBI"
 synopsis: |
   Intrigued by his grandfather's story of a mysterious guardian haunting the misty waters of Lake Kenyir, Adam, a curious teenager, sets out to uncover the truth. Armed with his grandfather's stories and a radio for safety, he paddles alone into the lake, shrouded in thick fog. His search turns cold when he meets Raja, a hornbill with piercing eyes, who seems to guide him deeper into the mist. A few disturbing things happen after Adam encounters Raja, which almost takes Adam's life.
 details:

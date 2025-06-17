@@ -26,7 +26,7 @@ online_links:
     url: "@.syamilfawwaz"
   - name: "YouTube"
     url: "@syamilfawwaz"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/rAAxbrljntA"
 synopsis: |
   On an unknown prison island, Sam sits in total silence. Agitated with an unstoppable urge that he can’t help to satisfy, he can’t relieve himself. His frustration grew when an unresponsive cellmate brought to his room, disturbing the already tense condition. Desperate to elevate the situation, he tried initiating conversation, leading him to reveal a disquieting memory that caused him to be imprisoned: standing beside a dead girl with bloodied knife, with blurred memories of what happened.
   

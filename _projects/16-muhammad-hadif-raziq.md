@@ -26,7 +26,7 @@ online_links:
     url: "muhdhadif111@gmail.com"
   - name: "Instagram"
     url: "@ard_bruh"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/o5ySJERka4k"
 synopsis: |
   A curious boy named Badrul discovers a cursed book in his grandfather’s attic. As he delves deeper into its pages, eerie whispers begin haunting him—drawing him closer to a terrifying truth hidden in the dark.
 details:

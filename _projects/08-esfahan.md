@@ -26,7 +26,7 @@ online_links:
     url: "@esfhn"
   - name: "Perrsonal website"
     url: "https://esfahanrz.wixsite.com/esfhn"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/jPS4ccoYRtY"
 synopsis: |
   In the cyberpunk city of Nu-Santara, two neo-exorcists, Bulan and Suria, cleanse the streets of malevolent spirits. When a powerful entity threatens to possess one of them, the duo must rely on their bond to banish it and save their own souls.
 details:

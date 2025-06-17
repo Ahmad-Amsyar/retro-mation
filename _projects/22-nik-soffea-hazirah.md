@@ -24,7 +24,7 @@ online_links:
     url: "@ciuman_mati420"
   - name: "Instagram"
     url: "nik_niknik_"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/vRXmMAJWRc0"
 synopsis: |
   It Star’s birthday. Red the bellpepper had forgotten to prepare a gift for his dear friend. His sister suggested a homemade apple pie. Will this birthday gift turn out fine?
 

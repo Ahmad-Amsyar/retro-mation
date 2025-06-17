@@ -28,7 +28,7 @@ online_links:
     url: "@Najmifujimaru"
   - name: "E-mail"
     url: "-Nurnajminasuha@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/T8OHo-6MVt8"
 synopsis: |
   This is a story about Kai, a young street racing criminal, faces a challenge from arrogant Ren, a good driver. Despite his limited experience, Kai masters a risky cornering maneuver, passing Ren at the last possible moment. This win gains Ren's respect and a growing rivalry, and serves as a turning point for Kai, teaching him the importance of fear and challenge.
 details:

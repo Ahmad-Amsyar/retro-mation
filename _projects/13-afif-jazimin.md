@@ -22,7 +22,7 @@ skills:
 online_links:
   - name: "E-mail"
     url: "afifjazz.AJ@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/bP9InTgiRe0"
 synopsis: |
   Sol, a lone robot searching for the power core to restore the world after waking up 100 years after the ‘Great Apocalypse’.
 details:

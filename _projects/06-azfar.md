@@ -24,7 +24,7 @@ online_links:
     url: "@azzie.farts"
   - name: "E-mail"
     url: "azzie.arts1011@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/gH0n1Gtc3mI"
 synopsis: |
   Deep within the rainforest, where myths whisper through the leaves and shadows move with purpose, a young man named Rohan finds himself at a crossroads. Desperate for money, he joins a ruthless poaching group despite knowing that every step he takes could mean harm to the forest’s fragile life. But everything changes when he encounters Mairuha, a feral girl with a mysterious connection to the jungle and its secrets. This is a tale of wild beauty and inner conflict, where the bond between man and nature becomes both a weapon and a cure.
 

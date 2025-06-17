@@ -22,7 +22,7 @@ skills:
 online_links:
   - name: "Instagram"
     url: "@Mess_4502"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/RAcaVtOVAeI"
 synopsis: |
   In a world where thr ground is no longer habitable, Ismael, an adventurous orphan boy, is determined to go out on a journey to find his father, who is rumoured to have gone missing when searching for the legendary region, Syurga. Following the guide from the old-age tale of a book called The Snow Giant, he flies on his ship and encounter wonders and dangers that the sky offers.
 details:

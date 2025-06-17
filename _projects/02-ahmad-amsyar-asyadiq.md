@@ -22,7 +22,7 @@ skills:
 online_links:
   - name: "E-mail"
     url: "officiallyahmadprotonmail.ch"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/NRK9U4wvBsU"
 synopsis: |
   In a quiet field, a curious robot named Retriever dreams of flying a traditional Malaysian WAU kite but lacks the necessary technique. Retriever's eager attempts lead to repeated failures and frustration, as it initially fails to grasp the importance of timing and wind. After pausing to patiently observe its surroundings and the wind's flow, Retriever attempts again, successfully launching the kite high into the sky and feeling a sense of accomplishment. However, a sudden strong gust causes the kite to crash, leaving Retriever disheartened. After reflection, the robot chooses not to give up, understanding that setbacks are a natural part of the learning process, and prepares to try again.
 

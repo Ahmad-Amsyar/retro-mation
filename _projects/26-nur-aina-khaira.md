@@ -25,7 +25,7 @@ online_links:
     url: "ainak360@gmail.com"
   - name: "Instagram"
     url: "@ainakhairaa"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/cEthBEhE2Fc"
 synopsis: |
   Akyra, a young girl, discovers a stack of letters in a quiet, dust-filled room. As she reads each one, vivid memories from her past unfold moments of love, regret, and healing. Through these reflections, she finds emotional closure and a peaceful path forward.
 

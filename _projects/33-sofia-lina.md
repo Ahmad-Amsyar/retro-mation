@@ -21,7 +21,7 @@ skills:
 online_links:
   - name: "E-mail"
     url: "sofialina238@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/nl92pNDKs5A"
 synopsis: |
   Louis just wanted to play fetch with his dog, Buddy. But when they come across something strange in the woods, their day takes a turn. What first feels like curiosity quickly becomes fear, and Louis finds himself lost in a world that doesn't feel real.
 

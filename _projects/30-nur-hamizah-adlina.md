@@ -24,7 +24,7 @@ online_links:
     url: "MiLina @olivelatte"
   - name: "E-mail"
     url: "mizahlina610@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/YEBPxw1wpDM"
 synopsis: |
   Emit, an artist with a creative block, despairs over her lost inspiration for a very long time. 
   

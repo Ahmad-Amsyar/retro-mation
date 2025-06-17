@@ -25,7 +25,7 @@ online_links:
     url: "@2308ai"
   - name: "TikTok"
     url: "@mmiid0ri0"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/yIizPBtzrsY"
 synopsis: |
   The narrative unfolds around Midori, a 22-year-old student navigating the calm city, overwhelmed by her struggles. Midori grapples with the daunting belief that confiding in Murasaki in her troubles would only burden him, so she keeps her thoughts and feelings locked away, hidden beneath a facade of independence. Her turmoil deepened after a harrowing experience when Aka, in a moment of desperation, dragged her into the relentless waves of the sea, leaving her to face the chilling depths alone. In that near-drowning moment, she lost hope, convinced she could manage her despair on her own. But just when the darkness threatened to consume her, Murasaki appeared like a beacon of light, pulling her from the water and helping her begin to heal. Now, Murasaki stands by her side, a steadfast presence amidst the chaos of her emotions. His unwavering support offers her a lifeline, reminding her that she doesn’t have to face her battles alone.
 

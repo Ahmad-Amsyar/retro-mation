@@ -19,7 +19,7 @@ skills:
   - "Adobe Illustrator"
   - "Clip Studio Paint"
 online_links:
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: ""
 synopsis: |
   Voruna the main character’s family and village has been attack in her during her childhood by an Empire.She manage to escape and years later, went on and fight the same Empire that attacked her family.
 

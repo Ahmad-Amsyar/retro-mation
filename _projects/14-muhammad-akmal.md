@@ -22,7 +22,7 @@ skills:
 online_links:
   - name: "X"
     url: "@Akmaljr2014"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/ORxVMX-1fk8"
 synopsis: |
   A story about a girl that discovery that her life is life a lie and it tied to a book that she found in the locked room.The secret that plague her life with nightmare everynight.
 details:

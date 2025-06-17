@@ -25,7 +25,7 @@ online_links:
     url: "iffahhirdinaa"
   - name: "Behance"
     url: "https://www.behance.net/rosesodax"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/iSww5eShjyw"
 synopsis: |
   Amir, a cheerful and caring young boy, is devastated when his beloved orange cat, Ginger, suddenly goes missing. Armed with only a tiny bell and the cherished memories they shared, Amir sets off on a heartfelt journey through playgrounds, alleyways, and his neighborhood in search of his furry friend. Along the way, he encounters a variety of characters. some helpful, some challenging. But this quest becomes more than just a search for a lost pet. It becomes a journey of friendship, bravery, and hope. In the end, Amir’s determination leads him to a discovery that not only reunites him with Ginger but also strengthens the bond between them like never before.
 

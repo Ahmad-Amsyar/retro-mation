@@ -24,7 +24,7 @@ online_links:
     url: "@azraellite"
   - name: "E-mail"
     url: "azrin.haffid11@gmail.com"
-video_embed_url: "https://www.youtube.com/embed/alIq_wG9FNk?si=MtOoIKIImIkR8djl"
+video_embed_url: "https://www.youtube.com/embed/38I2UVSdLcw"
 synopsis: |
   An angel, on her final mission before retirement, is tasked with finding a home for Oyen, an orange cat residing in a quiet adoption center. Oyen, a creature of habit, has grown accustomed to the solitude and fleeting human attention. However, with the angel's subtle intervention, a young woman seeking a companion is drawn to Oyen, reminded of a beloved past pet. A connection forms, and Oyen finally finds her forever home, allowing the angel to retire peacefully.
 details:
